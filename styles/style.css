@@ -7,3 +7,6 @@ body {
     color: #060; 
     font-weight: bold;
 }
+#map {
+    height: 100%;
+  }
