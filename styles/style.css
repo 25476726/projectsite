@@ -8,5 +8,6 @@ body {
     font-weight: bold;
 }
 #map {
-    height: 500px;
+    height: 50%;
+    width: 50%;
   }
