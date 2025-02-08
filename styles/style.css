@@ -3,3 +3,7 @@ body {
     color: #fefefe;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
+.navactive a {
+    color: #060; 
+    font-weight: bold;
+}
