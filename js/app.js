@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
-    const apiUrl = 'https://cors-anywhere.herokuapp.com/https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/Liverpool?unitGroup=uk&key=X4XHV88EHDFM4JG779XF927MQ&contentType=json&include=days&elements=datetime,tempmax,tempmin,temp,feelslike,humidity,precip,precipprob,preciptype,windspeed,sunrise,sunset,conditions,icon';
+    const apiUrl = 'http://localhost:5000/weather';  // Use local proxy server
     const outputElement = document.getElementById('weather-output');
 
     fetch(apiUrl)
@@ -12,6 +12,7 @@ document.addEventListener("DOMContentLoaded", () => {
         .then(data => {
             outputElement.innerHTML = "";
             const weather = data.days[0];
+
             const elements = [
                 `📅 Date: ${weather.datetime}`,
                 `🌡️ Max Temp: ${weather.tempmax}°C`,
