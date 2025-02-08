@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
-    const apiUrl = 'http://localhost:5000/weather';  // Use local proxy server
+    const apiUrl = 'https://weather-proxy-czez.onrender.com/weather';
     const outputElement = document.getElementById('weather-output');
 
     fetch(apiUrl)
