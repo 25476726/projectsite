@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
-    const apiUrl = 'https://weather-proxy-czez.onrender.com/weather';
+    const apiUrl = 'https://projectsite-1-t9yo.onrender.com/weather';
     const outputElement = document.getElementById('weather-output');
 
     fetch(apiUrl)
