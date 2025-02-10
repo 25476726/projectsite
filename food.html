@@ -22,12 +22,6 @@
             <li><a style="text-decoration:none;" href="slang.html">Scouse Slang Guide</a></li>
         </ul>
     </nav>
-    <div id="map"></div>
-
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDpU5QDLR183ukjikzb7HgLele1ajcOItM&libraries=places&callback=initMap" async defer></script>
-
-    <script src="js/map.js"></script>
-
     <h2>Restaurants in Liverpool City Centre</h2>
 
     <h3>Burger Restaurants</h3>
@@ -43,7 +37,11 @@
     <p>Nightcrawler Pizza</p>
     <p>Pizza Punks</p>
     <p>American Pizza Slice</p>
-
+    
+    <div id="map">
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDpU5QDLR183ukjikzb7HgLele1ajcOItM&libraries=places&callback=initMap" async defer></script>
+    <script src="js/map.js"></script>
+    </div>
     
 
 </body>
