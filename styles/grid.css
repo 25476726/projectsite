@@ -1,0 +1,7 @@
+nav {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr; /*12 cols*/
+    grid-template-rows: 1fr;
+    position: absolute;
+    bottom: 0px;
+}
