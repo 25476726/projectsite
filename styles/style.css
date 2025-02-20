@@ -67,11 +67,12 @@ body {
         padding-left: 16%;
         padding-right: 20%;
     }
-}
 #liver-banner {
     border-radius: 12px;
+    margin-top: 1%;
     max-width: 100%;
     height: auto;
+    filter: brightness(40%) sepia(100%);
 }
 
 
