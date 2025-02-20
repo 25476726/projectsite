@@ -13,6 +13,10 @@ body {
     font-weight: bold;
 }
 @media (min-aspect-ratio: 1/1) {
+    body {
+        padding-left: 15%;
+        padding-right: 15%;
+    }
     nav {
         position: fixed;
         top: 0;
