@@ -7,7 +7,6 @@ body {
     min-height: 100vh;
     margin: 0;
 }
-
 .navactive a {
     color: #060; 
     font-weight: bold;
@@ -61,6 +60,18 @@ body {
         height: 500px;
         width: 50%;
     }
+    #bannertext {
+        position: absolute;
+        top: 0%; 
+        left: 0%;
+        padding-left: 16%;
+        padding-right: 20%;
+    }
+}
+#liver-banner {
+    border-radius: 12px;
+    max-width: 100%;
+    height: auto;
 }
 
 
