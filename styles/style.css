@@ -11,6 +11,13 @@ body {
     color: #060; 
     font-weight: bold;
 }
+#nav {
+    transition: transform 0.3s ease-in-out;
+}
+
+.hidden {
+    display: none;
+}
 @media (min-aspect-ratio: 1/1) {
     body {
         padding-left: 15%;

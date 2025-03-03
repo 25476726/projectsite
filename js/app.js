@@ -36,6 +36,6 @@ document.addEventListener("DOMContentLoaded", () => {
         })
         .catch(error => {
             console.error('Error:', error);
-            outputElement.innerHTML = `<p style="color: red;">ERROR !!!!!!!! THE WEATHER DATA HAS NOT BEEN FETCHED!!!!!</p>`;
+            outputElement.innerHTML = `<p style="color: red;">Error fetching weather data. Try again in 30-60 seconds</p>`;
         });
 });
