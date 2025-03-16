@@ -1,5 +1,5 @@
 body {
-    background-color: #0a0a0a;
+    background-color: #0a0f0a;
     color: #fefefe;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     display: flex;
@@ -7,17 +7,40 @@ body {
     min-height: 100vh;
     margin: 0;
 }
+body.light-mode {
+    color: #0a0a0a;
+    background-color: #efe;
+}
+/* nav ul li a.light-mode, #navhide.light-mode, #theme-toggle.light-mode {
+    color: #0a0a0a;
+}
+nav.light-mode {
+    background-color: #cfc;
+} */
 .navactive a {
-    color: #060; 
+    color: lightgreen; 
     font-weight: bold;
+}
+nav a, #navhide, #theme-toggle {
+    text-decoration: none;
 }
 #nav {
     transition: transform 0.3s ease-in-out;
 }
-
-.hidden {
+#nav.hidden {
     display: none;
 }
+#navshow {
+    display: inline-block;
+}
+#nav:not(.hidden) + #navshow {
+    display: none;
+}
+#navhide, #theme-toggle {
+    cursor: pointer;
+}
+
+  
 @media (min-aspect-ratio: 1/1) {
     body {
         padding-left: 15%;
@@ -29,7 +52,7 @@ body {
         right: 0;
         height: 100vh;
         max-width: 20%; 
-        background-color: #111;
+        background-color: #121;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -50,7 +73,7 @@ body {
         width: 100%;
         padding: 10px 0;
     }
-    nav ul li a {
+    nav ul li a, #navhide, #theme-toggle {
         color: #fefefe;
         text-decoration: none;
         font-size: 18px;
@@ -58,7 +81,7 @@ body {
         text-align: center;
         padding: 10px 0;
     }
-    nav ul li a:hover {
+    nav ul li a:hover, #navhide.hover, #theme-toggle.hover {
         color: #fefefe;
         background-color: #0a0a4a;
         border-radius: 6px;
@@ -82,6 +105,9 @@ body {
     height: auto;
     filter: brightness(40%) sepia(100%);
 }
+/* #liver-banner.light-mode {
+    filter: brightness(100%) sepia(0%);
+} */
 .bgimg {
     border-radius: 12px;
     max-width: 100%;
@@ -94,10 +120,6 @@ body {
     height: auto;
     filter: brightness(80%) sepia(20%);
 }
-
-
-
-
 #map {
     height: 500px;
     width: 80%;
