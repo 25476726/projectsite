@@ -36,67 +36,13 @@ nav a, #navhide, #theme-toggle {
 #nav:not(.hidden) + #navshow {
     display: none;
 }
-#navhide, #theme-toggle {
+#navhide, #theme-toggle { /*fixes issue where these elements did not change the cursor to a pointer previously*/
     cursor: pointer;
 }
-
-  
-@media (min-aspect-ratio: 1/1) {
-    body {
-        padding-left: 15%;
-        padding-right: 15%;
-    }
-    nav {
-        position: fixed;
-        top: 0;
-        right: 0;
-        height: 100vh;
-        max-width: 20%; 
-        background-color: #121;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        padding: 10px 0;
-    }
-    nav ul {
-        display: flex;
-        flex-direction: column;
-        list-style-type: none;
-        padding: 0;
-        margin: 0;
-        width: 100%;
-    }
-    nav ul li {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 100%;
-        padding: 10px 0;
-    }
-    nav ul li a, #navhide, #theme-toggle {
-        color: #fefefe;
-        text-decoration: none;
-        font-size: 18px;
-        width: 100%;
-        text-align: center;
-        padding: 10px 0;
-    }
-    nav ul li a:hover, #navhide.hover, #theme-toggle.hover {
-        color: #fefefe;
-        background-color: #0a0a4a;
-        border-radius: 6px;
-    }
-    #map {
-        height: 500px;
-        width: 50%;
-    }
-    #bannertext {
-        position: absolute;
-        top: 0%; 
-        left: 0%;
-        padding-left: 16%;
-        padding-right: 20%;
-    }
+nav ul li a:hover, #navhide.hover, #theme-toggle.hover {
+    color: #fefefe;
+    background-color: #0a0a4a;
+    border-radius: 6px;
 }
 #liver-banner {
     border-radius: 12px;
@@ -127,4 +73,97 @@ nav a, #navhide, #theme-toggle {
 
 footer {
     margin-top: auto;
+}
+@media (min-aspect-ratio: 1/1) { /*Desktop only*/
+    body {
+        padding-left: 15%;
+        padding-right: 15%;
+    }
+    #navhide { /*nav to always display in desktop*/
+        display: none;
+    }
+    nav {
+        position: fixed;
+        top: 0;
+        right: 0;
+        height: 100vh;
+        max-width: 20%; 
+        background-color: #121;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 10px 10px;
+    }
+    nav ul {
+        display: flex;
+        flex-direction: column;
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+        width: 100%;
+    }
+    nav ul li {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        padding: 10px 0;
+    }
+    nav ul li a, #navhide, #theme-toggle {
+        color: #fefefe;
+        text-decoration: none;
+        font-size: 18px;
+        width: 100%;
+        text-align: center;
+        padding: 10px 0;
+    }
+    #map {
+        height: 500px;
+        width: 50%;
+    }
+    #bannertext {
+        position: absolute;
+        top: 0%; 
+        left: 0%;
+        padding-left: 16%;
+        padding-right: 20%;
+    }
+}
+@media (max-aspect-ratio: 1/1) { /*mobile only styles*/
+    nav {
+        position: fixed;
+        top: 0;
+        right: 0;
+        height: 100vh;
+        width: 100%; 
+        background-color: #121;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 10px 10px;
+        z-index: 10;
+    }
+    nav ul {
+        display: flex;
+        flex-direction: column;
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+        width: 100%;
+    }
+    nav ul li {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        padding: 10px 0;
+    }
+    nav ul li a, #navhide, #theme-toggle {
+        color: #fefefe;
+        text-decoration: none;
+        font-size: 18px;
+        width: 100%;
+        text-align: center;
+        padding: 10px 0;
+    }
 }
