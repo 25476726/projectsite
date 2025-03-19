@@ -23,7 +23,7 @@ nav a, #navhide, #theme-toggle {
     text-decoration: none;
 }
 #nav {
-    transition: transform 0.1s ease-in-out;
+    transition: transform 0.2s ease-in-out;
 }
 #navhide, #theme-toggle { /*fixes issue where these elements did not change the cursor to a pointer previously*/
     cursor: pointer;
@@ -90,16 +90,6 @@ nav ul li a:hover, #navhide.hover, #theme-toggle.hover {
     position: relative; 
     text-align: center; 
 }
-.banner-container h1 {
-    position: absolute;
-    top: 10%; 
-    left: 50%; 
-    color: #fff;
-    text-shadow: 2px 2px 8px midnightblue;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    font-size: 28px;
-    transform: translate(-50%, -50%);
-}
 /* #liver-banner.light-mode {
     filter: brightness(100%) sepia(0%);
 } */
@@ -127,6 +117,16 @@ footer {
         padding-left: 15%;
         padding-right: 15%;
     }
+    .banner-container h1 {
+        position: absolute;
+        top: 10%; 
+        left: 50%; 
+        color: #fff;
+        text-shadow: 2px 2px 8px midnightblue;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        font-size: 28px;
+        transform: translate(-50%, -50%);
+    }
     nav {
         display: flex !important; /* Ensure nav is always visible */
         max-width: 20%;
@@ -146,7 +146,7 @@ footer {
     @media (max-aspect-ratio: 1/1) { /* Mobile only */
         nav {
             transform: translateX(100%); /* Move nav off-screen */
-            transition: transform 0.1s ease-in-out;
+            transition: transform 0.2s ease-in-out;
             z-index: 10;
             width: 75%
         }
@@ -160,11 +160,16 @@ footer {
         #navshow {
             display: inline-block;
         }
+        .banner-container h1 {
+            position: absolute;
+            top: 50%; 
+        }
     }
     
-    .banner-container h1 {
+    .banner-container h1 { /*text was a bit high on mobile view*/
         position: absolute;
         top: 25%; 
         left: 50%; 
+        transform: translate(-50%, -50%);
     }
 }
