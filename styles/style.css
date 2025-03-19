@@ -11,12 +11,10 @@ body.light-mode {
     color: #0a0a0a;
     background-color: #efe;
 }
-/* nav ul li a.light-mode, #navhide.light-mode, #theme-toggle.light-mode {
-    color: #0a0a0a;
+/* remove default shadows buttons have */
+button { 
+    all: unset;
 }
-nav.light-mode {
-    background-color: #cfc;
-} */
 .navactive a {
     color: lightgreen; 
     font-weight: bold;
@@ -25,20 +23,23 @@ nav a, #navhide, #theme-toggle {
     text-decoration: none;
 }
 #nav {
-    transition: transform 0.3s ease-in-out;
+    transition: transform 0.1s ease-in-out;
 }
-/* #nav.hidden {
-    display: none;
-}
-#navshow {
-    display: inline-block;
-}
-#nav:not(.hidden) + #navshow {
-    display: none;
-} */
 #navhide, #theme-toggle { /*fixes issue where these elements did not change the cursor to a pointer previously*/
     cursor: pointer;
 }
+#navshow {
+    display: inline-block;
+    width: auto; 
+    max-width: 25%; 
+    padding: 10px 10px; 
+    text-align: center;
+    background-color: #0a3a1a; /* Example button styling */
+    color: white;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
 nav {
     position: fixed;
     top: 0;
@@ -118,7 +119,6 @@ nav ul li a:hover, #navhide.hover, #theme-toggle.hover {
     height: 500px;
     width: 80%;
 }
-
 footer {
     margin-top: auto;
 }
