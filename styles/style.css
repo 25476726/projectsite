@@ -27,7 +27,7 @@ nav a, #navhide, #theme-toggle {
 #nav {
     transition: transform 0.3s ease-in-out;
 }
-#nav.hidden {
+/* #nav.hidden {
     display: none;
 }
 #navshow {
@@ -35,7 +35,7 @@ nav a, #navhide, #theme-toggle {
 }
 #nav:not(.hidden) + #navshow {
     display: none;
-}
+} */
 #navhide, #theme-toggle { /*fixes issue where these elements did not change the cursor to a pointer previously*/
     cursor: pointer;
 }
@@ -128,12 +128,12 @@ footer {
         padding-right: 15%;
     }
     nav {
-        max-width: 20%; 
+        display: flex !important; /* Ensure nav is always visible */
+        max-width: 20%;
     }
-    #navhide { /*nav to always display in desktop*/
-        display: none;
+    #navhide, #navshow {
+        display: none; /* Hide toggle buttons on desktop */
     }
-    
     .banner-container {
         max-width: 90%
     }
@@ -143,10 +143,25 @@ footer {
     }
 }
 @media (max-aspect-ratio: 1/1) { /*mobile only styles*/
-    nav {
-        width: 100%; 
-        z-index: 10;
+    @media (max-aspect-ratio: 1/1) { /* Mobile only */
+        nav {
+            transform: translateX(100%); /* Move nav off-screen */
+            transition: transform 0.1s ease-in-out;
+            z-index: 10;
+            width: 75%
+        }
+        nav.hidden {
+            display: none; /* Ensure nav is hidden when needed */
+        }
+        nav.show {
+            transform: translateX(0); /* Slide nav into view */
+            display: flex;
+        }
+        #navshow {
+            display: inline-block;
+        }
     }
+    
     .banner-container h1 {
         position: absolute;
         top: 25%; 
