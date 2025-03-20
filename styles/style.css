@@ -8,7 +8,7 @@ body {
     margin: 0;
 }
 body.light-mode {
-    color: #0a0a0a;
+    color: black;
     background-color: #efe;
 }
 /* remove default shadows buttons have */
@@ -36,7 +36,7 @@ nav a, #navhide, #theme-toggle {
     text-align: center;
     background-color: #0a3a1a; /* Example button styling */
     color: white;
-    border-radius: 6px;
+    border-radius: 2px;
     cursor: pointer;
 }
 
@@ -77,10 +77,9 @@ nav ul li a, #navhide, #theme-toggle {
 nav ul li a:hover, #navhide.hover, #theme-toggle.hover {
     color: #fefefe;
     background-color: #0a0a4a;
-    border-radius: 6px;
+    border-radius: 2px;
 }
 #liver-banner {
-    border-radius: 12px;
     margin-top: 1%;
     max-width: 100%;
     height: auto;
@@ -94,13 +93,11 @@ nav ul li a:hover, #navhide.hover, #theme-toggle.hover {
     filter: brightness(100%) sepia(0%);
 } */
 .bgimg {
-    border-radius: 12px;
     max-width: 100%;
     height: auto;
     filter: brightness(50%) sepia(50%);
 }
 .tallimg {
-    border-radius: 12px;
     max-width: 50%;
     height: auto;
     filter: brightness(80%) sepia(20%);
@@ -114,8 +111,9 @@ footer {
 }
 @media (min-aspect-ratio: 1/1) { /*Desktop only*/
     body {
-        padding-left: 15%;
-        padding-right: 15%;
+        padding-left: 1%;
+        padding-right: 20%;
+        max-width: 85%;
     }
     .banner-container h1 {
         position: absolute;
