@@ -37,5 +37,5 @@ document.addEventListener("DOMContentLoaded", () => {
         .catch(error => {
             console.error('Error:', error);
             outputElement.innerHTML = `<p style="color: red;">Error fetching weather data. Try again in 30-60 seconds</p>`;
-        });
+        }); //the weather api shuts down when isnt active, so sometimes errors if it has not been called in a while. this error message makes users aware that the api will work within a minute.
 });

@@ -9,27 +9,24 @@ document.addEventListener("DOMContentLoaded", function () {
 
     function updateNavVisibility() {
         if (isMobile()) {
-            nav.classList.remove("show"); // Keep nav hidden initially
-            navShowButton.style.display = "inline-block"; // Show button
+            nav.classList.remove("show"); // initially hides nav in mobile view and shows the button
+            navShowButton.style.display = "inline-block"; 
         } else {
-            nav.classList.add("show"); // Always show nav on desktop
-            navShowButton.style.display = "none"; // Hide button
+            nav.classList.add("show"); // nav shows by defauly when desktop view loads and hides button
+            navShowButton.style.display = "none"; 
         }
     }
 
-    // Run on load and when window resizes
     updateNavVisibility();
-    window.addEventListener("resize", updateNavVisibility);
+    window.addEventListener("resize", updateNavVisibility); //runs every time the screen size changes
 
-    // Show nav on button click (Mobile only)
     navShowButton.addEventListener("click", function () {
-        nav.classList.add("show"); // Slide nav into view
-        navShowButton.style.display = "none"; // Hide button
+        nav.classList.add("show"); // Shows nav when show button pressed an dhides the button
+        navShowButton.style.display = "none"; 
     });
 
-    // Hide nav when clicking hide button
     navHideButton.addEventListener("click", function () {
-        nav.classList.remove("show"); // Hide nav
-        navShowButton.style.display = "inline-block"; // Show button again
+        nav.classList.remove("show"); // hides the nav when hide button pressed and shows the show button.
+        navShowButton.style.display = "inline-block";
     });
 });

@@ -11,9 +11,8 @@ body.light-mode {
     color: black;
     background-color: #efe;
 }
-/* remove default shadows buttons have */
 button { 
-    all: unset;
+    all: unset; /* remove default shadows buttons have */
 }
 .navactive a {
     color: lightgreen; 
@@ -34,7 +33,7 @@ nav a, #navhide, #theme-toggle {
     max-width: 25%; 
     padding: 10px 10px; 
     text-align: center;
-    background-color: #0a3a1a; /* Example button styling */
+    background-color: #0a3a1a;
     color: white;
     border-radius: 2px;
     cursor: pointer;
@@ -124,9 +123,9 @@ footer {
         font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
         font-size: 28px;
         transform: translate(-50%, -50%);
-    }
+   }
     nav {
-        display: flex !important; /* Ensure nav is always visible */
+        display: flex !important; /*nav always displays on desktop */
         max-width: 20%;
     }
     #navhide, #navshow {
@@ -143,16 +142,16 @@ footer {
 @media (max-aspect-ratio: 1/1) { /*mobile only styles*/
     @media (max-aspect-ratio: 1/1) { /* Mobile only */
         nav {
-            transform: translateX(100%); /* Move nav off-screen */
+            transform: translateX(100%); /* hides nav with animation */
             transition: transform 0.2s ease-in-out;
             z-index: 10;
             width: 75%
         }
         nav.hidden {
-            display: none; /* Ensure nav is hidden when needed */
+            display: none; /* hides nav*/
         }
         nav.show {
-            transform: translateX(0); /* Slide nav into view */
+            transform: translateX(0); /* moves nav on screen when needed */
             display: flex;
         }
         #navshow {
@@ -164,7 +163,7 @@ footer {
         }
     }
     
-    .banner-container h1 { /*text was a bit high on mobile view*/
+    .banner-container h1 { /*text was a bit high on mobile view so added in seperate style*/
         position: absolute;
         top: 25%; 
         left: 50%; 

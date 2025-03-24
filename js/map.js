@@ -4,6 +4,4 @@ function initMap() {
         zoom: 15,
     });
 }
-
-// Ensure initMap is globally accessible
 window.initMap = initMap;
