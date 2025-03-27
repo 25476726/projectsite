@@ -18,7 +18,7 @@ body.light-mode nav {
 body.light-mode .navactive a {
     color: #003200; 
 }
-body.light-mode .navinactive {
+body.light-mode nav li a {
     color: black; 
 }
 button { 
