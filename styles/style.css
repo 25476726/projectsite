@@ -11,6 +11,16 @@ body.light-mode {
     color: black;
     background-color: #efe;
 }
+body.light-mode nav {
+    background-color: #bfb;
+    color: black;
+}
+body.light-mode .navactive a {
+    color: #003200; 
+}
+body.light-mode .navinactive {
+    color: black; 
+}
 button { 
     all: unset; /* remove default shadows buttons have */
 }
@@ -38,7 +48,9 @@ nav a, #navhide, #theme-toggle {
     border-radius: 2px;
     cursor: pointer;
 }
-
+body.light-mode #navshow {
+    color: black;
+}
 nav {
     position: fixed;
     top: 0;
