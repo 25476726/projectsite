@@ -151,7 +151,6 @@ footer {
         width: 50%;
     }
 }
-@media (max-aspect-ratio: 1/1) { /*mobile only styles*/
     @media (max-aspect-ratio: 1/1) { /* Mobile only */
         nav {
             transform: translateX(100%); /* hides nav with animation */
@@ -181,4 +180,3 @@ footer {
         left: 50%; 
         transform: translate(-50%, -50%);
     }
-}
