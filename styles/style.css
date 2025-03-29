@@ -174,12 +174,14 @@ footer {
         .banner-container h1 {
             position: absolute;
             top: 50%; 
+        } 
+        .banner-container h1 { /*text was a bit high on mobile view so added in seperate style*/
+            position: absolute;
+            top: 25%; 
+            left: 50%; 
+            transform: translate(-50%, -50%);
         }
-    }
-    
-    .banner-container h1 { /*text was a bit high on mobile view so added in seperate style*/
-        position: absolute;
-        top: 25%; 
-        left: 50%; 
-        transform: translate(-50%, -50%);
+        .bar {
+            width: 100%;
+        }
     }
