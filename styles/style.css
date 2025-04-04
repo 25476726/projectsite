@@ -106,7 +106,7 @@ body.dark-mode {
     color: white;
     background-color: #0a0f0a;
 }
-body.dark-mode nav {
+body.dark-mode nav, body.dark-mode #navshow {
     background-color: #121;
     color: white;
 }
