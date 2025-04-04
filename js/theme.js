@@ -8,10 +8,10 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   toggleButton.addEventListener('click', () => {
-      document.body.classList.toggle('light-mode');
+      document.body.classList.toggle('dark-mode');
       
-      if (document.body.classList.contains('light-mode')) { /*saves last theme from previous use and applys it if there is one*/
-          localStorage.setItem('theme', 'light-mode');
+      if (document.body.classList.contains('dark-mode')) { /*saves last theme from previous use and applys it if there is one*/
+          localStorage.setItem('theme', 'dark-mode');
       } else {
           localStorage.removeItem('theme');
       }

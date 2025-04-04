@@ -1,32 +1,19 @@
 body {
-    background-color: #0a0f0a;
-    color: #fefefe;
+    background-color: #efe;
+    color: black;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
     margin: 0;
+    transition: 0.2s;
 }
-body.light-mode {
-    color: black;
-    background-color: #efe;
-}
-body.light-mode nav {
-    background-color: #bfb;
-    color: black;
-}
-body.light-mode .navactive a {
-    color: #003200; 
-}
-body.light-mode nav li a {
-    color: black; 
-}
+
 button { 
     all: unset; /* remove default shadows buttons have */
 }
 .navactive a {
-    color: lightgreen; 
-    font-weight: bold;
+    border-right: 16px solid #4e9e4e;
 }
 nav a, #navhide, #theme-toggle {
     text-decoration: none;
@@ -43,20 +30,17 @@ nav a, #navhide, #theme-toggle {
     max-width: 25%; 
     padding: 10px 10px; 
     text-align: center;
-    background-color: #0a3a1a;
-    color: white;
+    background-color: #bfb;
+    color: black;
     border-radius: 2px;
     cursor: pointer;
-}
-body.light-mode #navshow {
-    color: black;
 }
 nav {
     position: fixed;
     top: 0;
     right: 0;
     height: 100vh;
-    background-color: #121;
+    background-color: #bfb;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -78,31 +62,28 @@ nav ul li {
     padding: 10px 0;
 }
 nav ul li a, #navhide, #theme-toggle {
-    color: #fefefe;
+    color: black;
     text-decoration: none;
     font-size: 18px;
     width: 100%;
-    text-align: center;
+    text-align: right;
+    border-right: 16px solid transparent;
     padding: 10px 0;
+    padding-right: 8px;
+    transition: 0.2s;
 }
 nav ul li a:hover, #navhide.hover, #theme-toggle.hover {
-    color: #fefefe;
-    background-color: #0a0a4a;
-    border-radius: 2px;
+    border-right: 16px solid #6cbc6c;
 }
 #liver-banner {
     margin-top: 1%;
     max-width: 100%;
     height: auto;
-    filter: brightness(40%) sepia(100%);
 }
 .banner-container {
     position: relative; 
     text-align: center; 
 }
-/* #liver-banner.light-mode {
-    filter: brightness(100%) sepia(0%);
-} */
 .bgimg {
     max-width: 100%;
     height: auto;
@@ -120,6 +101,28 @@ nav ul li a:hover, #navhide.hover, #theme-toggle.hover {
 footer {
     margin-top: auto;
 }
+/* DARK MODE STYLES */
+body.dark-mode {
+    color: white;
+    background-color: #0a0f0a;
+}
+body.dark-mode nav {
+    background-color: #121;
+    color: white;
+}
+body.dark-mode .navactive a {
+    border-right: 16px solid lightgreen;
+}
+body.dark-mode nav li a {
+    color: white; 
+}
+body.dark-mode #navshow {
+    color: white;
+}
+body.dark-mode #liver-banner {
+    filter: brightness(50%) sepia(50%);
+}
+
 @media (min-aspect-ratio: 1/1) { /*Desktop only*/
     body {
         padding-left: 1%;
@@ -159,7 +162,7 @@ footer {
             transform: translateX(100%); /* hides nav with animation */
             transition: transform 0.2s ease-in-out;
             z-index: 10;
-            width: 75%
+            width: 60%
         }
         nav.hidden {
             display: none; /* hides nav*/
