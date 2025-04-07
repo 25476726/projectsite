@@ -25,7 +25,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     navShowButton.addEventListener("click", function () {
         nav.classList.add("show");
-        navShowButton.style.display = "none";
+        navShowButton.style.display = "inline-block";
         blurOverlay.classList.add("active");
     });
 

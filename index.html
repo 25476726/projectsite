@@ -14,7 +14,6 @@
     <button id="navshow">Show Nav</button>
     <nav id="nav">
         <ul>
-            <li id="navhide"><a>Hide Nav</a></li>
             <li class="navactive"><a href="index.html">Home</a></li>
             <li><a href="about.html">About Liverpool</a></li>
             <li><a href="sights.html">Sightseeing</a></li>
@@ -26,12 +25,14 @@
             <li><a href="housing.html">Housing</a></li>
             <li><a href="slang.html">Scouse Slang</a></li>
             <li id="theme-toggle"><a>Dark/Light Mode</a></li>
+            <li id="navhide"><a>Hide Nav</a></li>
         </ul>
     </nav>
     <section class="banner-container">
         <img id="liver-banner" src="assets/banner-liver.jpg" alt="Banner image of the Liverpool Liver Buildings.">
-        <h1>Welcome to the official guide to the city of Liverpool!</h1>
+        <h1 id="banner-title">LIVERPOOL</h1>
     </section>
+    <h2>Welcome to my official guide to the city of Liverpool!</h2>
     <p>In our guide to Liverpool. You can explore Liverpool's history, famous landmarks & places to see, shopping locations,
          places to grab a bite to eat, or a few drinks if you fancy. We also provide information about transport links to and from Liverpool and surrounding areas, 
          as well as hotels/B&B's if you are just planning a visit, or current housing options if you plan to move here long term! We have also kindly provided a guide
@@ -40,6 +41,8 @@
     <div id="weather-output"></div>
     <script src="js/app.js"></script>     <!-- this js link has to be here, it would not work if it was in the top -->
     <footer>
+        <p>© Copyright Lewis Brougham 2025</p>
+        <p>Like this site? <a id="link" href="https://lewis-brougham.netlify.app/#mywork" target="_blank" rel="noopener noreferrer">See more of my work</a></p>
     </footer>
     <div id="blur-overlay"></div>
 </body>
