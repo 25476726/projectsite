@@ -145,6 +145,18 @@ footer {
     opacity: 1;
     pointer-events: auto;
 }
+.answer-btn {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0; 
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.2s;
+  }
+  
 /* DARK MODE STYLES */
 body.dark-mode {
     color: white;

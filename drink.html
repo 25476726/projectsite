@@ -12,7 +12,6 @@
     <button id="navshow">Show Nav</button>
     <nav id="nav">
         <ul>
-            <li id="navhide"><a>Hide Nav</a></li>
             <li><a href="index.html">Home</a></li>
             <li><a href="about.html">About Liverpool</a></li>
             <li><a href="sights.html">Sightseeing</a></li>
@@ -24,11 +23,29 @@
             <li><a href="housing.html">Housing</a></li>
             <li><a href="slang.html">Scouse Slang Guide</a></li>
             <li id="theme-toggle"><a>Dark/Light Mode</a></li>
+            <li id="navhide"><a>Hide Nav</a></li>
         </ul>
         
     </nav>
     <h1>Pubs & Bars</h1>
-    <!-- <img class="bgimg" src="assets/boozer1.jpg" alt="background image of a bar in Liverpool"> -->
+    <h2>Struggling to decide where to go? Try our Liverpool City Centre Pub/Bar Picker!</h2>
+    <div class="container">
+        <h1>Boozer Selector 🍻</h1>
+        <p>What group of boozers would you like to visit today? Tiers are: A, B, C, D, E, F, U.</p>
+        <p>e.g If you would only like A rated boozers, type A. If you would like from A to C type AC. If you want all boozers to be included type all. 
+            If you're skint and only want to visit Wetherspoons pubs, type W</p>
+        <label for="tierInput">Choose your boozer tier(s):</label>
+        <input type="text" id="tierInput" placeholder="e.g. AB, AC, W, all" />
+    
+        <label for="countInput">How many boozers are you visiting today?</label>
+        <input type="number" id="countInput" min="1" placeholder="e.g. 3" />
+    
+        <button id="generateBtn">Choose my Boozers!</button>
+    
+        <div id="result" class="result"></div>
+      </div>
+    
+      <script src="js/gaffdecider.js"></script>
     <h2>Here is a selection of some of our favourite places to grab some drinks in Liverpool City Centre</h2>
     <article id="bars">
         <h3>Head of Steam</h3>

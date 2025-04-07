@@ -2,70 +2,80 @@ const questions = [
     {
       question: "If someone says 'I'm off the ale', what are they referring to?",
       answers: [
-        { text: "Going to the pub ", correct: false },
-        { text: "Going on holiday ", correct: false },
-        { text: "Not drinking alcohol ", correct: true },
-        { text: "They're on a diet ", correct: false }
+        { text: " Going to the pub ", correct: false },
+        { text: " Going on holiday ", correct: false },
+        { text: " Not drinking alcohol ", correct: true },
+        { text: " They're on a diet ", correct: false }
       ],
       explanation: ""
     },
     {
         question: "What would someone mean if they called you a 'plazzy Scouser'?",
         answers: [
-          { text: "You're from a rough area of Liverpool ", correct: false },
-          { text: "You're not from Liverpool ", correct: true },
-          { text: "You're from a posh part of Liverpool ", correct: false },
-          { text: "You live in a plastic house ", correct: false }
+          { text: " You're from a rough area of Liverpool ", correct: false },
+          { text: " You're not from Liverpool ", correct: true },
+          { text: " You're from a posh part of Liverpool ", correct: false },
+          { text: " You live in a plastic house ", correct: false }
+        ],
+        explanation: ""
+      },
+      {
+        question: "Translate this phrase into Scouse: 'I've just bought a boss pair of webs lad!",
+        answers: [
+          { text: " I've just bought an expensive pair of shorts ", correct: false },
+          { text: " I've just bought a smart pair of trousers ", correct: false },
+          { text: " I've just bought a fancy pair of earrings ", correct: false },
+          { text: " I've just bought a good pair of shoes ", correct: true }
         ],
         explanation: ""
       },
     {
       question: "What does 'Scran' refer to?",
       answers: [
-        { text: "Bed ", correct: false },
-        { text: "Food ", correct: true },
-        { text: "An insult ", correct: false },
-        { text: "Shampoo ", correct: false }
+        { text: " Bed ", correct: false },
+        { text: " Food ", correct: true },
+        { text: " An insult ", correct: false },
+        { text: " Shampoo ", correct: false }
       ],
       explanation: ""
     },
     {
         question: "If someone says 'Ta, la', what are they saying?",
         answers: [
-          { text: "Thank you ", correct: true },
-          { text: "Hello ", correct: false },
-          { text: "Goodbye ", correct: false },
-          { text: "Telling you off ", correct: false }
+          { text: " Thank you ", correct: true },
+          { text: " Hello ", correct: false },
+          { text: " Goodbye ", correct: false },
+          { text: " Telling you off ", correct: false }
         ],
         explanation: ""
       },
     {
         question: "What does 'Sound, lad!' mean?",
         answers: [
-          { text: "The music is too loud ", correct: false },
-          { text: "Turn the music up ", correct: false },
-          { text: "Good/Alright ", correct: true },
-          { text: "Start a fight ", correct: false }
+          { text: " The music is too loud ", correct: false },
+          { text: " Turn the music up ", correct: false },
+          { text: " Good/Alright ", correct: true },
+          { text: " Start a fight ", correct: false }
         ],
         explanation: ""
       },
       {
         question: "What is being referred to when someone says 'Look at his webs'?",
         answers: [
-          { text: "His glasses ", correct: false },
-          { text: "His shoes ", correct: true },
-          { text: "His eyes ", correct: false },
-          { text: "His hair ", correct: false }
+          { text: " His glasses ", correct: false },
+          { text: " His shoes ", correct: true },
+          { text: " His eyes ", correct: false },
+          { text: " His hair ", correct: false }
         ],
         explanation: ""
       },
     {
       question: "What are you being called if you're a 'meff'?",
       answers: [
-        { text: "A posh person ", correct: false },
-        { text: "Clever ", correct: false },
-        { text: "Loud ", correct: false },
-        { text: "Dirty ", correct: true }
+        { text: " A posh person ", correct: false },
+        { text: " A clever person ", correct: false },
+        { text: " A loud person ", correct: false },
+        { text: " A scruffy person ", correct: true }
       ],
       explanation: ""
     }
@@ -144,7 +154,8 @@ const questions = [
   });
   
   function showScore() {
-    questionElement.innerText = `🎉 You scored ${score} out of ${shuffledQuestions.length}!`;
+    const percentage = Math.round((score / shuffledQuestions.length) * 100);
+    questionElement.innerText = `You scored ${score} out of ${shuffledQuestions.length}!  You are ${percentage}% Scouse!`;    
     answersElement.innerHTML = "";
     nextButton.innerText = "Restart";
     nextButton.style.display = "inline-block";
