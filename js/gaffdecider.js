@@ -188,57 +188,55 @@ const tierMessages = {
       
     W: ['The Lime Kiln','The Welkin','The Captain Alexander','The North Western','The Richard John Blackler','The Fall Well']
   };
-  
   document.getElementById("generateBtn").addEventListener("click", () => {
     const tierInput = document.getElementById("tierInput").value.toUpperCase().trim();
     const countInput = parseInt(document.getElementById("countInput").value);
     const resultDiv = document.getElementById("result");
-  
+
     if (!tierInput || isNaN(countInput) || countInput < 1) {
-      resultDiv.textContent = "Please enter valid input for both fields.";
-      return;
+        resultDiv.textContent = "Please enter valid input for both fields.";
+        return;
     }
-  
+
     let options = [];
-  
+
     if (tierInput === "ALL") {
-      for (const tier in tierPubs) {
-        options = options.concat(tierPubs[tier]);
-      }
-    } else if (tierInput === "W") {
-      options = tierPubs.W;
-    } else {
-      for (const char of tierInput) {
-        if (tierPubs[char]) {
-          options = options.concat(tierPubs[char]);
+        for (const tier in tierPubs) {
+            options = options.concat(tierPubs[tier]);
         }
-      }
+    } else if (tierInput === "W") {
+        options = tierPubs.W;
+    } else {
+        for (const char of tierInput) {
+            if (tierPubs[char]) {
+                options = options.concat(tierPubs[char]);
+            }
+        }
     }
-  
+
     if (options.length === 0) {
-      resultDiv.textContent = "No pubs found for that tier. Make sure to add them to the list!";
-      return;
+        resultDiv.textContent = "No pubs found for that tier. Make sure to add them to the list!";
+        return;
     }
-  
+
     const message = tierMessages[tierInput] || "Decent day out that!";
-    let output = `${message}\n\n`;
-  
+    let output = `${message}<br><br>`;  // Notice we start with <br> for an HTML line break
+
     const selected = [];
     while (selected.length < countInput && options.length > 0) {
-      const rand = Math.floor(Math.random() * options.length);
-      selected.push(options.splice(rand, 1)[0]);
+        const rand = Math.floor(Math.random() * options.length);
+        selected.push(options.splice(rand, 1)[0]);
     }
-  
+
     selected.forEach((boozer, idx) => {
-      output += `Boozer ${idx + 1}: ${boozer}\n`;
+        output += `Boozer ${idx + 1}: ${boozer}<br>`;  // Each boozer is now followed by <br> for a line break
     });
-  
+
     // Free pass bonus
     const pass = Math.floor(Math.random() * 5);
     if (pass === 0) {
-      output += `\n🎉 YOU HAVE BEEN AWARDED A FREE PASS! You can skip one un-derisable boozer today!`;
+        output += `YOU HAVE BEEN AWARDED A FREE PASS! You can skip one undesirable boozer today!<br>`;
     }
-  
-    resultDiv.textContent = output;
-  });
-  
+
+    resultDiv.innerHTML = output;  // Use innerHTML to render the HTML with line breaks
+});
