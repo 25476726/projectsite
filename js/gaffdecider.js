@@ -221,12 +221,12 @@ const tierMessages = {
     }
 
     const message = tierMessages[tierInput] || "Decent day out that!";
-    let output = `${message}<br><br>`;  // Notice we start with <br> for an HTML line break
+    let output = `${message}<br><br>`; 
 
     const selected = [];
     while (selected.length < countInput && options.length > 0) {
       const rand = Math.floor(Math.random() * options.length);
-      selected.push(options[rand]);  // Don't remove the boozer from the options list
+      selected.push(options[rand]); 
     }
     
     selected.forEach((boozer, idx) => {
