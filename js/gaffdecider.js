@@ -3,11 +3,11 @@ const tierMessages = {
     B: "Decent little day/night out for you there!",
     C: "Not too shabby like!",
     D: "Doesn't sound like you're gonna have a good time",
-    E: "Sounds like a moody one that",
+    E: "Sounds like a moody time out that",
     F: "What are you doing with yourself?",
     U: "Just stay home, it isn't worth it",
     W: "Make sure to blag a chip count to annoy all the Facebook groups!",
-    all: "Going on the sesh, I see!"
+    All: "Going on the sesh, I see!"
   };
   
   const tierPubs = {
