@@ -123,7 +123,6 @@ const tierMessages = {
         "Harrison's",
         "The Long Shot",
         "O'Neill's",
-        "Pop world (Liverpool)",
         "The Shipping Forecast",
         "The Flute",
         "Dockleaf (Baltic Triangle)",
@@ -157,7 +156,8 @@ const tierMessages = {
         "Jacaranda",
         "Yankees",
         "The Vernon Arms",
-        "Brownlows"
+        "Brownlows",
+        "The Liffey"
       ],
       
       E: [
@@ -170,6 +170,7 @@ const tierMessages = {
       
       F: [
         "Ruby Blues",
+        "Pop world",
         "Midland",
         "Ava's Bar"
       ],
