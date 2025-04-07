@@ -225,13 +225,14 @@ const tierMessages = {
 
     const selected = [];
     while (selected.length < countInput && options.length > 0) {
-        const rand = Math.floor(Math.random() * options.length);
-        selected.push(options.splice(rand, 1)[0]);
+      const rand = Math.floor(Math.random() * options.length);
+      selected.push(options[rand]);  // Don't remove the boozer from the options list
     }
-
+    
     selected.forEach((boozer, idx) => {
-        output += `Boozer ${idx + 1}: ${boozer}<br>`;  // Each boozer is now followed by <br> for a line break
+      output += `Boozer ${idx + 1}: ${boozer}<br>`;
     });
+    
 
     // Free pass bonus
     const pass = Math.floor(Math.random() * 5);
