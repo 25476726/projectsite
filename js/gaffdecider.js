@@ -12,7 +12,7 @@ const tierMessages = {
   
   const tierPubs = {
     A: [
-        "Head of Steam (Wins the award for the best gaff of them all!)",
+        "Head of Steam",
         "The Bridewell",
         "Liverpool Gin Distillery",
         "Bobo",
@@ -23,7 +23,7 @@ const tierMessages = {
         "Brass Monkey",
         "Pins Social Club",
         "The Merchant",
-        "Kazimier garden",
+        "Modo",
         "Albert's Schloss",
         "Lounge 69",
         "Beer Engine",
@@ -36,9 +36,9 @@ const tierMessages = {
         "The Saddle",
         "Castle Street Townhouse",
         "Soho",
+        "Kazimier garden",
         "Zodiac Shisha Lounge",
         "Papillon",
-        "Modo",
         "Lady of mann",
         "The Cavern Pub",
         "The Cavern Club",
@@ -74,7 +74,7 @@ const tierMessages = {
         "Thomas Rigby's",
         "Doctor Duncan's",
         "McCooley's (Mathew St)",
-        "Einsteins",
+        "The Excelsior",
         "The Lime Kiln Wetherspoons (L1 Concert Square)"
       ],
       
@@ -84,6 +84,7 @@ const tierMessages = {
         "The Pumphouse",
         "The Gladstone",
         "Yates's",
+        "Einsteins",
         "Peaky Blinders Bar (Baltic Triangle)",
         "Revolution (St peter's square)",
         "Aether",
@@ -139,9 +140,7 @@ const tierMessages = {
         "The Liverpool bar",
         "McCooley's (Concert Square)",
         "Coyote Ugly",
-        "Bierkeller",
-        "Ten Street Social",
-        "The Excelsior"
+        "Ten Street Social"
       ],
       
       D: [
@@ -164,6 +163,7 @@ const tierMessages = {
         "omg",
         "Eagle (Vauxhall rd)",
         "Dirty O'Sheas",
+        "Bierkeller",
         "The Richard John Blackler Wetherspoons L1 Charlotte Street",
         "The Fall Well Wetherspoons L1 Queens Square Station"
       ],
