@@ -234,11 +234,11 @@ const tierMessages = {
     });
     
 
-    // Free pass bonus
+    // Free pass bonus, chooses a number between 0 and 5, if number is 0 then the pass is awarded.
     const pass = Math.floor(Math.random() * 5);
     if (pass === 0) {
         output += `YOU HAVE BEEN AWARDED A FREE PASS! You can skip one undesirable boozer today!<br>`;
     }
 
-    resultDiv.innerHTML = output;  // Use innerHTML to render the HTML with line breaks
+    resultDiv.innerHTML = output; 
 });
