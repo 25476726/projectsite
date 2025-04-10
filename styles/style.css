@@ -19,7 +19,6 @@ button {
 }
 .navactive a {
     /* border-right: 16px solid #6cbc6c; */
-    transform: rotate(-45deg) translate(0, -5px);
     border-bottom: 1px solid black;
 }
 nav a, #navhide, #theme-toggle {
@@ -60,30 +59,40 @@ nav {
     0% { background-position: 50% 100%; }
     100% { background-position: 50% 0%; }
 }
+.material-icons {
+    font-size: 2.5em !important; /* or whatever size you like */
+    line-height: 100vh; /* makes the icon stretch vertically if alone in a container */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 nav ul {
     display: flex;
     flex-direction: column;
+    flex: 1;
+    justify-content: space-evenly; /* evenly distribute icons */
     list-style-type: none;
     padding: 0;
     margin: 0;
     width: 100%;
 }
 nav ul li {
+    flex: 1;
+    height: 100%;
+    display: flex;
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100%;
-    padding: 10px 0;
-    transform: rotate(45deg);
+    padding: 5px 0;
 }
 nav ul li a, #navhide, #theme-toggle {
     color: black;
     text-decoration: none;
-    font-size: 18px;
     width: 100%;
     text-align: center;
     /* border-right: 16px solid transparent; */
-    padding: 10px 0;
+    padding: 5px 0;
     /* padding-right: 8px; */
     transition: 0.2s;
 }
@@ -93,7 +102,6 @@ nav ul li a {
 nav ul li a:hover, #navhide.hover, #theme-toggle.hover {
     /* border-right: 16px solid #76c776; */
     border-bottom: 1px solid rgba(0, 0, 0, 0.75);
-    transform: rotate(-45deg) translate(0, -5px);
 }
 #liver-banner {
     margin-top: 1%;
@@ -105,6 +113,7 @@ nav ul li a:hover, #navhide.hover, #theme-toggle.hover {
     text-align: center; 
 }
 .banner-container h1 {
+    background: url(liver-banner.jpg);
     color: #fff;
     text-shadow: 2px 2px 8px midnightblue;
     font-family: "Codystar", sans-serif;
@@ -234,7 +243,7 @@ body.dark-mode #link {
             transform: translateX(100%); /* hides nav with animation */
             transition: transform 0.2s ease-in-out;
             z-index: 10;
-            width: 45%
+            max-width: 55%
         }
         nav.hidden {
             display: none; /* hides nav*/
