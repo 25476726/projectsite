@@ -211,8 +211,8 @@ body.dark-mode #link {
 @media (min-aspect-ratio: 1/1) { /*Desktop only*/
     body {
         padding-left: 1%;
-        padding-right: 20%;
-        max-width: 85%;
+        padding-right: 5%;
+        max-width: 95%;
     }
     .banner-container h1 {
         position: absolute;
