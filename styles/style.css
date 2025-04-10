@@ -19,7 +19,7 @@ button {
 }
 .navactive a {
     /* border-right: 16px solid #6cbc6c; */
-    transform: rotate(-45deg);
+    transform: rotate(-45deg) translate(0, -5px);
     border-bottom: 1px solid black;
 }
 nav a, #navhide, #theme-toggle {
@@ -93,7 +93,7 @@ nav ul li a {
 nav ul li a:hover, #navhide.hover, #theme-toggle.hover {
     /* border-right: 16px solid #76c776; */
     border-bottom: 1px solid rgba(0, 0, 0, 0.75);
-    transform: rotate(-45deg);
+    transform: rotate(-45deg) translate(0, -5px);
 }
 #liver-banner {
     margin-top: 1%;
