@@ -120,10 +120,9 @@ nav ul li a:hover, #navhide.hover, #theme-toggle.hover {
     font-style: normal;
     font-size: 4em;
 }
-.bgimg {
-    max-width: 100%;
+.about-img {
+    max-width: 70%;
     height: auto;
-    filter: brightness(50%) sepia(50%);
 }
 .tallimg {
     max-width: 50%;
