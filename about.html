@@ -5,8 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Scouse Liverpool Guide - About Liverpool</title>
     <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/grid.css">
     <script src="js/nav.js"></script>
     <script src="js/theme.js"></script>
+    <script src="js/scroll.js"></script>
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 </head>
 <body>
@@ -28,47 +30,65 @@
         </ul>
     </nav>
     <!-- THIS INFO FROM https://www.ljmu.ac.uk/conferences/asc/about-liverpool -->
-    <h1>About Liverpool, & Liverpool's History</h1>
-    <h2>General Info about Liverpool</h2>
-    <div class="banner-container">
-        <p>Liverpool is a city situated in the North West of England, approximately 200 miles (by road) from the capitals of England, Scotland and Wales. 
-            Liverpool City itself has a population of just under 500,000 people, while the entire metropolitan area has around 2.25 million. 
-            Liverpool is the fifth largest metropolitan area in the UK. Liverpool became a borough in the year 1207, founded by king John over 800 years ago! 
-            Liverpool then became a city in 1880. </p>
-        <img class="bgimg" src="assets/night1.jpg" alt="Liverpool skyline at night">
-    </div>
-    <h2>Liverpool's Heritage</h2>
-    <div class="banner-container">
-        <p class="fgtext">In 2008 Liverpool was the European Capital of Culture and prior to this several sites were given World Heritage status, 
-            including the Royal Liver Building built between 1908 and 1911, the Albert Dock, 
-            and St George's Hall which boasts being the first air conditioned building in the UK.
-        Liverpool is also home to two cathedrals. The Anglican Cathedral, taking almost 75 years to build, which is the largest cathedral in Britain. 
-        As well as the Metrapolitan Cathedral, built in the 1960s, which is a very unique landmark in itself.</p>
-        <img class="bgimg" src="assets/anglican1.jpg" alt="Liverpool's Anglican Cathedral">
-    </div>
-    <h2>Liverpool's Football</h2>
-    <p>Football is by far the most popular sport in the city. Liverpool is home to two Premier League sides: Liverpool Football Club (LFC), 
-        which was founded in 1892, and is currently located in Anfield. And Everton Football Club (EFC), founded in 1878, 
-        and is currently located at Goodison Park in Walton. </p>
-    <p>A new stadium is nearing completion at Bramley Moore Docks in Vauxhall, 
-        which is set to become Everton's home ground in the 2025-2026 season, replacing the old Goodison Park stadium. 
-        This new stadium is set to be the 8th largest in England with a capacity of 52,888 people, 
-        which is significantly more than the just under 40,000 that Goodison Park holds.  </p>
-    <p>There is a third team located in Merseyside that is far less known about, Tranmere Rovers located in Prenton Park, 
-        an area of Birkenhead, located on the Wirral. This team is much less successful, only playing in League 2 
-        (the lowest division of the English Football League). An interesting fact about this team and their ground is that 
-        their stadium lights were bought second hand from Everton when they upgraded their lights.</p>
-    <h2>The Grand National, known as "The Races"</h2>
-    <p>The Grand National is an annual horce racing event which takes place in April, around Easter time. This is located at Aintree Racecourse. 
-        The Grand National involves three days of horse racing, and individuals are able to bet on which horse will win. 
-        It can be watched on TV on ITV Racing, or tickets can be bought to attend this event in person.</p>
-    <h2>Music</h2>
-    <p>Liverpool is very well known as being the World Capital City of Pop, it has been recognised by Guinness World Records for this. 
-        By far the most famous group from the city is The Beatles, one of the most successfull Pop music bands.</p>
-        <footer>
+    <main class="scroll-wrapper">
+        <section class="about-section">
+            <h1>About Liverpool, & Liverpool's History</h1>
+                <p>Liverpool, a vibrant city in the North West of England, is located approximately 200 miles by road from the capitals of England, Scotland, and Wales. 
+                    With a population of just under 500,000 in the city itself, and around 2.25 million people in the wider metropolitan area, Liverpool ranks as the fifth largest metropolitan area in the UK.
+                    The city's rich history dates back over 800 years to 1207, when it was founded by King John as a borough. Over the centuries, Liverpool has evolved into a bustling port city, 
+                    a centre of trade, and a cultural hub. In 1880, it was granted city status, solidifying its place as one of the most historically significant cities in the country. Today, 
+                    Liverpool is renowned not only for its remarkable past but also for its modern-day significance in arts, culture, and innovation, continuing to play a pivotal role in the UK's development. </p>
+                <img class="about-img" src="assets/night1.jpg" alt="Liverpool skyline at night">
+        </section>
+        <section class="about-section">
+            <img class="about-img" src="assets/anglican1.jpg" alt="Liverpool's Anglican Cathedral">
+            <h2>Liverpool's Heritage</h2>
+                <p class="fgtext">In 2008 Liverpool was the European Capital of Culture and prior to this several sites were given World Heritage status, 
+                    including the Royal Liver Building built between 1908 and 1911, the Albert Dock, 
+                    and St George's Hall which boasts being the first air conditioned building in the UK.
+                Liverpool is also home to two cathedrals. The Anglican Cathedral, taking almost 75 years to build, which is the largest cathedral in Britain. 
+                As well as the Metrapolitan Cathedral, built in the 1960s, which is a very unique landmark in itself.</p>
+            </section>
+            <section class="about-section">
+                <h2>Liverpool's Football</h2>
+                    <p>Football is by far the most popular sport in the city. Liverpool is home to two Premier League sides: Liverpool Football Club (LFC), 
+                        which was founded in 1892, and is currently located in Anfield. And Everton Football Club (EFC), founded in 1878, 
+                        and is currently located at Goodison Park in Walton. </p>
+                    <p>A new stadium is nearing completion at Bramley Moore Docks in Vauxhall, 
+                        which is set to become Everton's home ground in the 2025-2026 season, replacing the old Goodison Park stadium. 
+                        This new stadium is set to be the 8th largest in England with a capacity of 52,888 people, 
+                        which is significantly more than the just under 40,000 that Goodison Park holds.  </p>
+                <img class="about-img" src="https://static.standard.co.uk/2021/08/09/09/PLLiverpoolEverton2122.jpg?crop=8:5,smart&quality=75&auto=webp&width=1000" alt="Liverpool & Everton Football Club Badges">
+                <p>There is a third team located in Merseyside that is far less known about, Tranmere Rovers located in Prenton Park, 
+                    an area of Birkenhead, located on the Wirral. This team is much less successful, only playing in League 2 
+                    (the lowest division of the English Football League). An interesting fact about this team and their ground is that 
+                    their stadium lights were bought second hand from Everton when they upgraded their lights.</p>
+            </section>
+            <section class="about-section">
+                <img class="about-img" src="https://i2-prod.walesonline.co.uk/incoming/article28984409.ece/ALTERNATES/s810/0_Randox-Grand-National-Dayat-Aintree-RacecourseLiverpoolPic-Andrew-Teebay.jpg" alt="Liverpool's Grand National Horse Racing Event.">
+                <h2>The Grand National, known as "The Races"</h2>
+                    <p>The Grand National is an annual horse racing event held in April, typically around Easter, at Aintree Racecourse near Liverpool. Known for its challenging and unique nature, it is one of the most famous steeplechases in the world. The event spans three days, 
+                        with the Grand National race itself being the main highlight. This iconic race covers a distance of 4 miles and includes 30 fences, many of which are notoriously difficult, making it a test of both the horses' and jockeys' endurance and skill.
+                        During the event, spectators can place bets on their chosen horses, and millions of pounds are wagered each year. The Grand National is widely broadcast on ITV Racing, bringing the excitement into homes across the UK and beyond. For those wanting to experience it in person, 
+                        tickets are available to attend the event at Aintree, where the atmosphere is filled with excitement, with spectators enjoying not just the racing, but also the social aspect of the occasion. The Grand National remains a key event in the UK’s sporting calendar, celebrated by fans from all walks of life.</p>
+            </section>
+            <section class="about-section">
+            <h2>Music</h2>
+                <p>Liverpool, often hailed as the World Capital City of Pop, holds a special place in the history of music. The city’s significant contribution to global pop culture is so notable that it has earned recognition from Guinness World Records for this title.
+                     From its rich musical heritage to its vibrant contemporary scene, Liverpool has cemented itself as a powerhouse in the music world.
+                    At the heart of Liverpool’s musical legacy is The Beatles, arguably the most famous band to ever emerge from the city. Their groundbreaking influence on the pop music genre has shaped the landscape of music for decades. 
+                    As pioneers of modern pop, rock, and even experimental music, The Beatles remain one of the best-selling music artists of all time, with their songs continuing to resonate across generations.
+                    <img class="about-img" src="https://www.discoverbritain.com/_gatsby/file/fc733acfa88438dfcbd64f313724b54b/Royal%20Liver%20Building%20.png" alt="Beatles statues in Liverpool">
+                    Beyond the legacy of The Beatles, Liverpool’s music scene flourished in the 1990s and 2000s, when the city became a hub for new sounds, subcultures, and emerging talent. The 051 club, famously known as "The Cream," became an iconic venue for rave and dance music, 
+                    drawing massive crowds to experience the city’s electronic music culture. Alongside this, Pleasure Rooms was another key spot in Liverpool’s nightlife, offering a space for both local and international DJs to showcase house, trance, and club music to a fervent crowd. 
+                    These venues and their associated scenes contributed to Liverpool’s reputation as a global party city and made it an important destination for dance music enthusiasts.
+                    With such a rich and ever-evolving musical legacy, Liverpool continues to thrive as a city of musical innovation, producing not only world-renowned artists but also nurturing diverse music scenes that keep its spirit alive today..</p>
+            </section>
+        </main>
+        <!-- <footer>
             <p>© Copyright Lewis Brougham 2025</p>
             <p>Like this site? <a id="link" href="https://lewis-brougham.netlify.app/#mywork" target="_blank" rel="noopener noreferrer">See more of my work</a></p>
-        </footer>
+        </footer> -->
         <div id="blur-overlay"></div>
     </body>
     </html>
