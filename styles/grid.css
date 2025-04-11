@@ -5,16 +5,3 @@ nav {
     position: absolute;
     bottom: 0px;
 }
-/* .about-section {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr;
-}
-.about-img:nth-child(2n) {
-    grid-row: 1;
-    grid-column: 2;
-}
-.about-img:nth-child(2n+1) {
-    grid-row: 1;
-    grid-column: 1;
-} */

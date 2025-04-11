@@ -3,10 +3,10 @@ body {
     background-color: #efe;
     color: black;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
     margin: 0;
-    height: 100vh;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    scroll-behavior: smooth;
     transition: 0.2s;
 }
 #link {
@@ -53,7 +53,6 @@ nav {
     flex-direction: column;
     align-items: center;
     padding: 10px 10px;
-    z-index: 10;
 }
 @keyframes gradientAnimation {
     0% { background-position: 50% 100%; }
@@ -168,73 +167,6 @@ footer {
     cursor: pointer;
     transition: 0.2s;
   }
-  .scroll-wrapper {
-    display: flex; /* Arrange children (sections) in a row */
-    flex-direction: row; /* Ensure the content flows horizontally */
-    overflow-x: auto; /* Allow horizontal scrolling */
-    overflow-y: hidden; /* Prevent vertical scrolling */
-    overflow: hidden; /* Hide both scrollbars */
-    height: 100vh; /* Ensure the height fills the viewport */
-    width: 95vw; 
-}
-.scroll-wrapper::-webkit-scrollbar {
-    display: none; 
-}
-.about-section {
-    flex: 0 0 100vw; /* Each section takes up 100% of the viewport width */
-    height: 100vh; /* Ensure each section fills the viewport height */
-    padding: 2rem;
-    box-sizing: border-box;
-    margin-right: 1rem; /* Optional: space between sections */
-}
-
-
-/* Responsive content styling */
-.about-section h1,
-.about-section h2,
-.about-section p {
-    max-width: 80%;
-    margin-left: auto;
-    margin-right: auto;
-}
-/* Image styling */
-.about-img {
-    max-height: 50%;
-    max-width: 100%;
-    height: auto;
-    display: block;
-    margin: 0 auto;
-}
-/* Animated headers */
-.about-section h1,
-.about-section h2 {
-    opacity: 0;
-    transform: translateY(20px);
-    animation: fadeSlideUp 1s ease-out forwards;
-}
-.about-section h1 {
-    animation-delay: 0.2s;
-    font-size: 2.5rem;
-    text-align: center;
-}
-.about-section h2 {
-    animation-delay: 0.4s;
-    font-size: 2rem;
-    text-align: center;
-}
-/* Animation Keyframes */
-@keyframes fadeSlideUp {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-
   
 /* DARK MODE STYLES */
 body.dark-mode {
