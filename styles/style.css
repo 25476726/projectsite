@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Codystar:wght@300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Monoton&display=swap');
 body {
     background-color: #efe;
     color: black;
@@ -8,6 +8,7 @@ body {
     min-height: 100vh;
     margin: 0;
     transition: 0.2s;
+    cursor: url('liverbird-light.png'),auto;
 }
 #link {
     font-weight: bold;
@@ -112,13 +113,16 @@ nav ul li a:hover, #navhide.hover, #theme-toggle.hover {
     text-align: center; 
 }
 .banner-container h1 {
-    background: url(liver-banner.jpg);
     color: #fff;
-    text-shadow: 2px 2px 8px midnightblue;
-    font-family: "Codystar", sans-serif;
-    font-weight: 500;
+    /* text-shadow: 2px 2px 8px midnightblue; */
+    font-family: "Monoton", sans-serif;
+    font-weight: 400;
     font-style: normal;
-    font-size: 4em;
+    font-size: clamp(2rem, 14vw, 12rem);
+    background: url(banner-liver.jpg);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 100%;
 }
 .about-img {
     max-width: 70%;
