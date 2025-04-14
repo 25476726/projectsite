@@ -65,8 +65,8 @@ button {
     100% { background-position: 50% 0%; }
 }
 .material-icons {
-    font-size: 2.5em !important; /* or whatever size you like */
-    line-height: 100vh; /* makes the icon stretch vertically if alone in a container */
+    font-size: 2.5em !important; 
+    line-height: 100vh; 
     display: flex;
     align-items: center;
     justify-content: center;
@@ -75,6 +75,7 @@ button {
     margin-top: 1%;
     max-width: 100%;
     height: auto;
+    filter: brightness(30%) sepia(80%);
 }
 .banner-container {
     position: relative; 
@@ -82,7 +83,6 @@ button {
 }
 .banner-container h1 {
     color: #fff;
-    /* text-shadow: 2px 2px 8px midnightblue; */
     font-family: "Monoton", sans-serif;
     font-weight: 400;
     font-style: normal;
@@ -137,14 +137,16 @@ nav.show {
 nav.show ~ main {
     display: none;
   }
+  .banner-container h1 { 
+    position: absolute;
+    top: 25%; 
+    left: 50%; 
+    transform: translate(-50%, -50%);
+}
 /* DARK MODE STYLES */
 body.dark-mode {
     color: white;
     background-color: #0a0f0a;
-}
-
-body.dark-mode #liver-banner {
-    filter: brightness(50%) sepia(50%);
 }
 body.dark-mode #link {
     font-weight: bold;
@@ -159,14 +161,8 @@ body.dark-mode #link {
         width: 100vw;
         height: 100vh;
       }
-    .banner-container h1 {
-        position: absolute;
-        top: 15% !important; 
-        left: 50%; 
-        transform: translate(-50%, -50%);
-   }
     .banner-container {
-        max-width: 90%
+        max-width: 80vw;
     }
     #map {
         height: 500px;
@@ -185,16 +181,6 @@ body.dark-mode #link {
             width: 100vw;
             height: 90vh;
           }      
-        .banner-container h1 {
-            position: absolute;
-            top: 50%; 
-        } 
-        .banner-container h1 { /*text was a bit high on mobile view so added in seperate style*/
-            position: absolute;
-            top: 25%; 
-            left: 50%; 
-            transform: translate(-50%, -50%);
-        }
         .bar {
             width: 100%;
         }

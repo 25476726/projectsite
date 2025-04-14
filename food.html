@@ -5,28 +5,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Scouse Liverpool Guide - Food</title>
     <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/grid.css">
     <script src="js/nav.js"></script>
     <script src="js/theme.js"></script>
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 </head>
 <body>
-    <button id="navshow">Show Nav</button>
+
     <nav id="nav">
         <ul>
-            <li><a href="index.html"><i class="material-icons">home</i></a></li>
-            <li><a href="about.html"><i class="material-icons">apps</i></a></li>
-            <li><a href="sights.html"><i class="material-icons">signpost</i></a></li>
-            <li class="navactive"><a href="food.html"><i class="material-icons">restaurant</i></a></li>
-            <li><a href="drink.html"><i class="material-icons">liquor</i></a></li>
-            <li><a href="shop.html"><i class="material-icons">shopping_cart</i></a></li>
-            <li><a href="transport.html"><i class="material-icons">commute</i></a></li>
-            <li><a href="hotel.html"><i class="material-icons">hotel</i></a></li>
-            <li><a href="housing.html"><i class="material-icons">apartment</i></a></li>
-            <li><a href="slang.html"><i class="material-icons">quiz</i></a></li>
-            <li id="theme-toggle"><a><i class="material-icons">contrast</i></a></li>
-            <li id="navhide"><a><i class="material-icons">close</i></a></li>
+            <li id="home-tile"><a href="index.html"><i class="material-icons">home</i>  Home</a></li>
+            <li id="about-tile"><a href="about.html"><i class="material-icons">apps</i>About Liverpool</a></li>
+            <li id="sights-tile"><a href="sights.html"><i class="material-icons">signpost</i>Sightseeing</a></li>
+            <li id="food-tile-active"><a href="food.html"><i class="material-icons">restaurant</i>fancy a scran?</a></li>
+            <li id="drink-tile"><a href="drink.html"><i class="material-icons">liquor</i>fancy a bevvy?</a></li>
+            <li id="shop-tile"><a href="shop.html"><i class="material-icons">shopping_cart</i>Shopping</a></li>
+            <li id="transport-tile"><a href="transport.html"><i class="material-icons">commute</i>Transport</a></li>
+            <li id="hotel-tile"><a href="hotel.html"><i class="material-icons">hotel</i>gaffs to stay over</a></li>
+            <li id="housing-tile"><a href="housing.html"><i class="material-icons">apartment</i>gaffs to live in</a></li>
+            <li id="quiz-tile"><a href="slang.html"><i class="material-icons">quiz</i>How Scouse are you?</a></li>
+            <li id="theme-toggle"><a><i class="material-icons">contrast</i>Theme</a></li>
+            <li id="navhide"><a><i class="material-icons">close</i>Hide Nav</a></li>
         </ul>
     </nav>
+    <main id="food-main">
+        <button id="navshow"><i class="material-icons">menu</i></button>
     <h1>Restaurants & places to eat</h1>
     <h2>Restaurants in Liverpool City Centre</h2>
     <p>Red Dog Saloon</p>
@@ -52,6 +55,6 @@
         <p>© Copyright Lewis Brougham 2025</p>
         <p>Like this site? <a id="link" href="https://lewis-brougham.netlify.app/#mywork" target="_blank" rel="noopener noreferrer">See more of my work</a></p>
     </footer>
-    <div id="blur-overlay"></div>
+</main>
 </body>
 </html>

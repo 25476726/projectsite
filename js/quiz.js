@@ -20,6 +20,26 @@ const questions = [
         explanation: ""
       },
       {
+        question: "What is a pan of scouse?",
+        answers: [
+          { text: " Soup ", correct: false },
+          { text: " Curry ", correct: false },
+          { text: " Pot Noodles ", correct: false },
+          { text: " Stew ", correct: true }
+        ],
+        explanation: ""
+      },
+      {
+        question: "What is a 'Manc'?",
+        answers: [
+          { text: " Someone from the Isle of Man ", correct: false },
+          { text: " Someone from a posh part of Liverpool ", correct: false },
+          { text: " Someone from Manchester ", correct: true },
+          { text: " Someone from America ", correct: false }
+        ],
+        explanation: ""
+      },
+      {
         question: "Translate this phrase into Scouse: 'I've just bought a boss pair of webs lad!",
         answers: [
           { text: " I've just bought an expensive pair of shorts ", correct: false },

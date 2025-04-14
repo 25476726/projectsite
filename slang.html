@@ -5,28 +5,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Scouse Liverpool Guide - Slang</title>
     <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/grid.css">
     <script src="js/nav.js"></script>
     <script src="js/theme.js"></script>
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 </head>
 <body>
-    <button id="navshow">Show Nav</button>
+
     <nav id="nav">
         <ul>
-            <li><a href="index.html"><i class="material-icons">home</i></a></li>
-            <li><a href="about.html"><i class="material-icons">apps</i></a></li>
-            <li><a href="sights.html"><i class="material-icons">signpost</i></a></li>
-            <li><a href="food.html"><i class="material-icons">restaurant</i></a></li>
-            <li><a href="drink.html"><i class="material-icons">liquor</i></a></li>
-            <li><a href="shop.html"><i class="material-icons">shopping_cart</i></a></li>
-            <li><a href="transport.html"><i class="material-icons">commute</i></a></li>
-            <li><a href="hotel.html"><i class="material-icons">hotel</i></a></li>
-            <li><a href="housing.html"><i class="material-icons">apartment</i></a></li>
-            <li class="navactive"><a href="slang.html"><i class="material-icons">quiz</i></a></li>
-            <li id="theme-toggle"><a><i class="material-icons">contrast</i></a></li>
-            <li id="navhide"><a><i class="material-icons">close</i></a></li>
+            <li id="home-tile"><a href="index.html"><i class="material-icons">home</i>  Home</a></li>
+            <li id="about-tile"><a href="about.html"><i class="material-icons">apps</i>About Liverpool</a></li>
+            <li id="sights-tile"><a href="sights.html"><i class="material-icons">signpost</i>Sightseeing</a></li>
+            <li id="food-tile"><a href="food.html"><i class="material-icons">restaurant</i>fancy a scran?</a></li>
+            <li id="drink-tile"><a href="drink.html"><i class="material-icons">liquor</i>fancy a bevvy?</a></li>
+            <li id="shop-tile"><a href="shop.html"><i class="material-icons">shopping_cart</i>Shopping</a></li>
+            <li id="transport-tile"><a href="transport.html"><i class="material-icons">commute</i>Transport</a></li>
+            <li id="hotel-tile"><a href="hotel.html"><i class="material-icons">hotel</i>gaffs to stay over</a></li>
+            <li id="housing-tile"><a href="housing.html"><i class="material-icons">apartment</i>gaffs to live in</a></li>
+            <li id="quiz-tile-active"><a href="slang.html"><i class="material-icons">quiz</i>How Scouse are you?</a></li>
+            <li id="theme-toggle"><a><i class="material-icons">contrast</i>Theme</a></li>
+            <li id="navhide"><a><i class="material-icons">close</i>Hide Nav</a></li>
         </ul>
     </nav>
+    <main id="quiz-main">
+        <button id="navshow"><i class="material-icons">menu</i></button>
+    <section>
     <h1>The Scouse Test! How Scouse are you?</h1>
     <div id="quiz-container">
         <h2 id="question">Loading question...</h2>
@@ -34,11 +38,39 @@
         <button id="next-btn">Next</button>
       </div>
       <script src="js/quiz.js"></script>
-
+    </section>
+    <section>
+      <h2>Don't do this in Liverpool... Unless You're Ready for a Scrap</h2>
+      <ul>
+        <li class="listhead">Don't Mention Manchester</li>
+        <li>Scousers love their city fiercely. Comparing Liverpool to Manchester (especially saying it's "better") is a guaranteed way to start a heated conversation. 
+            Also never confuse a Scouser with a Manc. It’s basically a sin. Totally different accents, cultures, and footy teams. Know the difference, your life may depend on it.
+            NEVER wear a Man United shirt either. Especially not around Anfield. Or Goodison Park. Actually, best not to pack one at all... you're in Liverpool now, lad.
+        </li>
+        <li class="listhead">Don't Blag the Scouse Accent</li>
+        <li>You'll just come across like a bad wool, don't even bother. Don't pretend our accent is hard to understand either cause you're talking garbage!
+            The Scouse accent is one of the most unique in the UK. Sure, it’s fast and full of slang, but mocking it or acting confused every time someone speaks will get old very quickly. 
+            Best approach? Just listen, ask if you need help once or twice, and enjoy the musical chaos of it.
+        </li>
+        <li class="listhead">Don't Expect Quiet Nights Out</li>
+        <li>Scousers go hard when it comes to nightlife. We're talking all-night raves, mad bar crawls, and outfits that defy weather logic. It’s not a competition, 
+            know your limits and hydrate between bevs, unless you fancy ending up in A&E or with a story that starts, “So I woke up in Bootle…” 
+            If you're after peace and quiet, maybe head to the countryside like Formby. Or a library.
+        </li>
+        <li class="listhead">Don't Feed the Seagulls Unless You Fancy Losing a Finger (or Your Greggs pasty)</li>
+        <li>Them Liverpool seagulls are not normal birds. They’re massive, fearless, and trained in aerial chip theft. If you wave a sausage roll in the air, 
+            don’t be shocked when it’s snatched mid-bite. Keep your scran close, and your pastry closer.
+        </li>
+        <li class="listhead">Don't Dress for the Weather – Dress for the Occasion (No Matter the Temperature)</li>
+        <li>You’ll see locals rocking shorts, fake tan, and lashes in full force even when it’s 4°C and raining sideways. Scouse fashion is all about commitment. 
+            If you turn up to Concert Square in hiking boots and a rain mac, you're getting clocked.
+        </li>
+      </ul>
+    </section>
     <footer>
         <p>© Copyright Lewis Brougham 2025</p>
         <p>Like this site? <a id="link" href="https://lewis-brougham.netlify.app/#mywork" target="_blank" rel="noopener noreferrer">See more of my work</a></p>
     </footer>
-    <div id="blur-overlay"></div>
+</main>
 </body>
 </html>
