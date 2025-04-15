@@ -15,6 +15,8 @@ body {
     color: midnightblue;
 }
 #nav li {
+    position: relative;
+    overflow: hidden;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -24,7 +26,24 @@ body {
     border-radius: 2px;
     margin: 0.5rem;
     transition: transform 0.3s ease;
+    color: white; /* keeps text readable */
 }
+#nav li::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    filter: brightness(60%) sepia(80%); 
+    background: inherit;
+    z-index: 0;
+    transition: filter 0.3s ease;
+}
+#nav li:hover::before {
+    filter: brightness(100%) sepia(0%);
+}
+
 #home-tile, #home-tile-active {
     background-image: url('banner-liver-crop.jpg');
 }
@@ -46,7 +65,7 @@ body {
 }
 
 #shop-tile, #shop-tile-active {
-    background-image: url('images/nav-shop.jpg');
+    background-image: url('nav-images/l1.avif'); /*Image from: https://unsplash.com/photos/people-walking-on-the-street-during-daytime-MkvehbVPPDw*/
 }
 
 #transport-tile, #transport-tile-active {
@@ -62,22 +81,19 @@ body {
 }
 
 #quiz-tile, #quiz-tile-active {
-    background-image: url('images/nav-quiz.jpg');
+    background-image: url('nav-images/quiz.jpg'); /*Image is AI generated*/
 }
-
-
-  #nav li:hover {
-    background-color: #005fa1;
-  }
   #nav li a {
     color: white;
     text-decoration: none;
+    text-shadow: 4px 4px 6px rgba(0, 0, 0, 1); 
     font-size: 1rem;
     display: flex;
     align-items: center;
     justify-content: center;
     width: 100%;
     height: 100%;
+    z-index: 1;
   }
 button { 
     all: unset; /* remove default shadows buttons have */
@@ -97,6 +113,7 @@ button {
 }
 #navhide, #theme-toggle { /*fixes issue where these elements did not change the cursor to a pointer previously*/
     cursor: pointer;
+    background: darkolivegreen;
 }
 #navshow {
     display: inline-block;
@@ -200,6 +217,21 @@ body.dark-mode {
 body.dark-mode #link {
     font-weight: bold;
     color: lightblue;
+}
+body.dark-mode #nav li::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    filter: brightness(20%) sepia(80%); 
+    background: inherit;
+    z-index: 0;
+    transition: filter 0.3s ease;
+}
+body.dark-mode #nav li:hover::before {
+    filter: brightness(75%) sepia(25%);
 }
 
 @media (min-aspect-ratio: 1/1) { /*Desktop only*/
