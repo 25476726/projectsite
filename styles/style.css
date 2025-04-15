@@ -128,6 +128,14 @@ footer {
     transition: transform 0.2s ease-in-out;
     z-index: 10;
 }
+#drink-tile a, #drink-tile-active a {
+    transform: rotate(90deg);
+    flex-shrink: 1;
+}
+ #quiz-tile a, #quiz-tile-active a {
+    transform: rotate(-90deg);
+    flex-shrink: 1;
+}
 nav.hidden {
     display: none; 
 }
@@ -175,6 +183,9 @@ body.dark-mode #link {
     .bar {
         width: 50%;
     }
+    #about-tile a, #about-tile-active a {
+        transform: rotate(90deg);
+    }
 }
     @media (max-aspect-ratio: 1/1) { /* Mobile only */
         #nav ul {
@@ -187,5 +198,8 @@ body.dark-mode #link {
           }      
         .bar {
             width: 100%;
+        }
+         #shop-tile a, #shop-tile-active a {
+            transform: rotate(-90deg);
         }
     }
