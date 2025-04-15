@@ -168,6 +168,9 @@ body.dark-mode #link {
         height: 100vh;
         overflow: hidden;
       }
+      #nav li a {
+        font-size: 1.4rem;
+      }
     .banner-container {
         max-width: 80vw;
     }
@@ -192,6 +195,9 @@ body.dark-mode #link {
             height: 90vh;
             overflow: hidden;
           }      
+          #nav li a {
+            font-size: 0.9rem;
+          }
         .bar {
             width: 100%;
         }
