@@ -15,14 +15,57 @@ body {
     color: midnightblue;
 }
 #nav li {
-    background-color: #0078d7;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     display: flex;
     align-items: center;
     justify-content: center;
     border-radius: 2px;
     margin: 0.5rem;
-    transition: background-color 0.3s ease;
-  }
+    transition: transform 0.3s ease;
+}
+#home-tile, #home-tile-active {
+    background-image: url('banner-liver-crop.jpg');
+}
+
+#about-tile, #about-tile-active {
+    background-image: url('nav-images/night1.jpg');
+}
+
+#sights-tile, #sights-tile-active {
+    background-image: url('nav-images/anglican1.jpg');
+}
+
+#food-tile, #food-tile-active {
+    background-image: url('nav-images/food.JPG');
+}
+
+#drink-tile, #drink-tile-active {
+    background-image: url('nav-images/pint.JPG');
+}
+
+#shop-tile, #shop-tile-active {
+    background-image: url('images/nav-shop.jpg');
+}
+
+#transport-tile, #transport-tile-active {
+    background-image: url('nav-images/transport.jpg');
+}
+
+#hotel-tile, #hotel-tile-active {
+    background-image: url('nav-images/bed.jpg');
+}
+
+#housing-tile, #housing-tile-active {
+    background-image: url('nav-images/housing.jpg');
+}
+
+#quiz-tile, #quiz-tile-active {
+    background-image: url('images/nav-quiz.jpg');
+}
+
+
   #nav li:hover {
     background-color: #005fa1;
   }

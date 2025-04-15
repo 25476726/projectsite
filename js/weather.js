@@ -43,7 +43,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
             // weather report
             const elements = [
-                `Alright kidda, here’s the lowdown for the weather today ${weather.datetime}: conditions are lookin’ like ${weather.conditions}, ${vibeDescription}. You’re lookin’ at a max of ${weather.tempmax}°C and a low of ${weather.tempmin}°C, with the current temperature sittin’ around ${weather.temp}°C – though it’s feelin’ more like ${weather.feelslike}°C. Humidity’s at ${weather.humidity}%, and there’s been about ${weather.precip}mm of rain with a ${weather.precipprob}% chance of more on the way. Wind’s clockin’ in at around ${weather.windspeed}mph. The sun made its entrance at ${weather.sunrise}AM and it’ll leg it again at around ${weather.sunset}PM.`,
+                `Alright kidda, here’s the lowdown for the weather today ${weather.datetime}: conditions are lookin’ like ${weather.conditions}, ${vibeDescription}. You’re lookin’ at a max of ${weather.tempmax}°C and a low of ${weather.tempmin}°C, with the current temperature sittin’ around ${weather.temp}°C – though it’s feelin’ more like ${weather.feelslike}°C. Humidity’s at ${weather.humidity}%, and there’s been about ${weather.precip}mm of rain with a ${weather.precipprob}% chance of more on the way. Wind’s clockin’ in at around ${weather.windspeed}mph. The sun made its entrance at ${weather.sunrise} AM and it’ll leg it again at around ${weather.sunset} PM.`,
             ];
 
             // display in html
