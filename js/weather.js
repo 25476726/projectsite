@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", () => {
             const weather = data.days[0];
 
             const elements = [
-                `Alright kidda, here’s the lowdown for ${weather.datetime}: conditions are lookin’ like ${weather.conditions}, so take from that what you will. You’re lookin’ at a max of ${weather.tempmax}°C and a low of ${weather.tempmin}°C, with the current temperature sittin’ around ${weather.temp}°C – though it’s feelin’ more like ${weather.feelslike}°C. Humidity’s at ${weather.humidity}%, so it might feel a touch muggy, and there’s been about ${weather.precip}mm of rain with a ${weather.precipprob}% chance of more on the way. Wind’s clockin’ in at around ${weather.windspeed}mph, enough to ruffle your barnet but not blow you over. The sun made its entrance at ${weather.sunrise} and it’ll duck out again around ${weather.sunset}. Regardless of what this is chatting, remember to dress for the occasion – not the weather, la.`
+                `Alright kidda, here’s the lowdown for ${weather.datetime}: conditions are lookin’ like ${weather.conditions}, so take from that what you will. You’re lookin’ at a max of ${weather.tempmax}°C and a low of ${weather.tempmin}°C, with the current temperature sittin’ around ${weather.temp}°C – though it’s feelin’ more like ${weather.feelslike}°C. Humidity’s at ${weather.humidity}%, and there’s been about ${weather.precip}mm of rain with a ${weather.precipprob}% chance of more on the way. Wind’s clockin’ in at around ${weather.windspeed}mph. The sun made its entrance at ${weather.sunrise} and it’ll leg it again at around ${weather.sunset}. Regardless of what this is chatting, remember to dress for the occasion – not the weather, la.`
             
             ];
 
