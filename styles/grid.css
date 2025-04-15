@@ -24,7 +24,7 @@
     #nav ul {
       display: grid;
       grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-      grid-template-rows: 1fr 1fr 1fr 1fr;
+      grid-template-rows: 0.5fr 1fr 1fr 1fr;
     }
   
     #about-tile, #about-tile-active {
@@ -78,7 +78,7 @@
     #nav ul {
       display: grid;
       grid-template-columns: 1fr 1fr 1fr 1fr;
-      grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+      grid-template-rows: 0.5fr 1fr 1fr 1fr 1fr;
     }
   
     #about-tile, #about-tile-active {

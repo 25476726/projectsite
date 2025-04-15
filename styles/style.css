@@ -130,12 +130,6 @@ footer {
     transition: transform 0.2s ease-in-out;
     z-index: 10;
 }
-#drink-tile a, #drink-tile-active a {
-    transform: rotate(90deg);
-}
- #quiz-tile a, #quiz-tile-active a {
-    transform: rotate(-90deg);
-}
 nav.hidden {
     display: none; 
 }
@@ -166,6 +160,9 @@ body.dark-mode #link {
 }
 
 @media (min-aspect-ratio: 1/1) { /*Desktop only*/
+    body {
+        margin-inline: 1em;
+    }
     #nav ul {
         list-style: none;
         padding: 0;
@@ -187,18 +184,18 @@ body.dark-mode #link {
     .bar {
         width: 50%;
     }
-    #about-tile a, #about-tile-active a {
-        transform: rotate(90deg);
-    }
 }
     @media (max-aspect-ratio: 1/1) { /* Mobile only */
+        body {
+            margin-inline: 0.5em;
+        }
         #nav ul {
             list-style: none;
             padding-bottom: 10%;
             padding: 0;
             margin: 0;
             width: 100vw;
-            height: 90vh;
+            height: 80vh;
             overflow: hidden;
           }      
           #nav li a {
@@ -206,8 +203,5 @@ body.dark-mode #link {
           }
         .bar {
             width: 100%;
-        }
-         #shop-tile a, #shop-tile-active a {
-            transform: rotate(-90deg);
         }
     }
