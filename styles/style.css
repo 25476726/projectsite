@@ -39,6 +39,12 @@ body {
 button { 
     all: unset; /* remove default shadows buttons have */
 }
+.first-p:first-letter { /*make first letter massive*/
+    float: left;
+    font-size: 3em;
+    margin-inline: 5px;
+    margin-top: -10px;
+}
 .navactive a {
     /* border-right: 16px solid #6cbc6c; */
     border-bottom: 1px solid black;
