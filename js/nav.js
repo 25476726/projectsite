@@ -14,13 +14,11 @@ document.addEventListener("DOMContentLoaded", function () {
       navShowButton.style.display = "none";
     }
   
-    // Always start hidden
+    //Initially hide nav on page load
     hideNav();
   
-    // Show nav on button click
     navShowButton.addEventListener("click", showNav);
   
-    // Hide nav on button click
     navHideButton.addEventListener("click", hideNav);
   });
   

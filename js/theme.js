@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
       document.body.classList.toggle('dark-mode');
       
       if (document.body.classList.contains('dark-mode')) { /*saves last theme from previous use and applys it if there is one*/
-          localStorage.setItem('theme', 'dark-mode');
+          localStorage.setItem('theme', 'dark-mode'); //toggles css class to change styles for a dark theme.
       } else {
           localStorage.removeItem('theme');
       }

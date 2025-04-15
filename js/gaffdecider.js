@@ -220,7 +220,7 @@ const tierMessages = {
         return;
     }
 
-    const message = tierMessages[tierInput] || "Decent day out that!";
+    const message = tierMessages[tierInput] || "Decent day out that kidda!";
     let output = `${message}<br><br>`; 
 
     const selected = [];

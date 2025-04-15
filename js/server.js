@@ -1,3 +1,4 @@
+//This script is for a proxy server for my Weather API.
 const express = require("express");
 const cors = require("cors");
 const fetch = require("node-fetch");
@@ -5,7 +6,7 @@ const fetch = require("node-fetch");
 const app = express();
 const PORT = 5000;
 
-app.use(cors()); // Enable CORS for all requests
+app.use(cors()); 
 
 app.get("/weather", async (req, res) => {
     try {
