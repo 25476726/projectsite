@@ -249,9 +249,6 @@ body.dark-mode #nav li:hover::before {
       #nav li a {
         font-size: 1.4rem;
       }
-    .banner-container {
-        max-width: 80vw;
-    }
     #map {
         height: 500px;
         width: 50%;
