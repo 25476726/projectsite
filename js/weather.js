@@ -13,7 +13,6 @@ document.addEventListener("DOMContentLoaded", () => {
             outputElement.innerHTML = "";
             const weather = data.days[0];
 
-            // Weather condition handling logic
             const condition = weather.conditions.toLowerCase();
             let vibes = [];
 
@@ -35,21 +34,19 @@ document.addEventListener("DOMContentLoaded", () => {
             if (condition.includes("fog") || condition.includes("mist")) {
                 vibes.push("Like walking through pea soup – visibility’s low, so take it steady.");
             }
-
-            // Fallback if no recognised conditions found
-            if (vibes.length === 0) {
+            if (vibes.length === 0) {//falls back to this if it can't find the conditions
                 vibes.push("Weather’s doing its own thing today – standard Liverpool mystery. Even we can't tell what it's up to.");
             }
 
-            // Combine vibes into a natural-sounding sentence
+            // Combines multiple vibes together to make it sound more natural
             const vibeDescription = vibes.join(" And ");
 
-            // Full weather report text
+            // weather report
             const elements = [
                 `Alright kidda, here’s the lowdown for the weather today ${weather.datetime}: conditions are lookin’ like ${weather.conditions}. ${vibeDescription}.. You’re lookin’ at a max of ${weather.tempmax}°C and a low of ${weather.tempmin}°C, with the current temperature sittin’ around ${weather.temp}°C – though it’s feelin’ more like ${weather.feelslike}°C. Humidity’s at ${weather.humidity}%, and there’s been about ${weather.precip}mm of rain with a ${weather.precipprob}% chance of more on the way. Wind’s clockin’ in at around ${weather.windspeed}mph. The sun made its entrance at ${weather.sunrise}AM and it’ll leg it again at around ${weather.sunset}PM.`,
             ];
 
-            // Display weather information
+            // display in html
             elements.forEach(text => {
                 const p = document.createElement("p");
                 p.textContent = text;
@@ -58,6 +55,6 @@ document.addEventListener("DOMContentLoaded", () => {
         })
         .catch(error => {
             console.error('Error:', error);
-            outputElement.innerHTML = `<p style="color: red;">Error fetching weather data. Try again in 30-60 seconds</p>`;
-        });
+            outputElement.innerHTML = `<p style="color: red;">Ah, there’s been a bit of a hiccup fetchin’ the weather data. Give it a minute or two, then try again, it should work then kidda.</p>`;
+        }); //the weather api shuts down when isnt active, so sometimes errors if it has not been called in a while. this error message makes users aware that the api will work within a minute.
 });
