@@ -14,18 +14,7 @@ document.addEventListener("DOMContentLoaded", () => {
             const weather = data.days[0];
 
             const elements = [
-                `📅 Date: ${weather.datetime}`,
-                `🌡️ Max Temp: ${weather.tempmax}°C`,
-                `🌡️ Min Temp: ${weather.tempmin}°C`,
-                `🌡️ Current Temp: ${weather.temp}°C`,
-                `🤒 Feels Like: ${weather.feelslike}°C`,
-                `💧 Humidity: ${weather.humidity}%`,
-                `☔ Precipitation: ${weather.precip} mm`,
-                `🌦️ Precipitation Probability: ${weather.precipprob}%`,
-                `💨 Wind Speed: ${weather.windspeed} mph`,
-                `🌅 Sunrise: ${weather.sunrise} AM`,
-                `🌇 Sunset: ${weather.sunset} PM`,
-                `🌤️ Conditions: ${weather.conditions}`
+                'Alright lad, here is the lowdown for ${weather.datetime}: conditions are lookin like ${weather.conditions}, so take from that what you will. You are lookin at a max of ${weather.tempmax}°C and a low of ${weather.tempmin}°C, with the current temperature sittin around ${weather.temp}°C though it is feelin more like ${weather.feelslike}°C. Humidity is at ${weather.humidity}%, so it might feel a touch muggy, and there has been about ${weather.precip}mm of rain with a ${weather.precipprob}% chance of more on the way. Wind is clockin in at around ${weather.windspeed}mph, enough to ruffle your barnet but not blow you over. The sun made its entrance at ${weather.sunrise} and it will duck out again around ${weather.sunset}. Regardless of what this is chatting, remember to dress for the occasion not the weather, la.'
             ];
 
             elements.forEach(text => {
