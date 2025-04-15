@@ -38,15 +38,15 @@ document.addEventListener("DOMContentLoaded", () => {
 
             // Fallback if no recognised conditions found
             if (vibes.length === 0) {
-                vibes.push("Weather’s doing its own thing today – standard Liverpool mystery.");
+                vibes.push("Weather’s doing its own thing today – standard Liverpool mystery. Even we can't tell what it's up to.");
             }
 
             // Combine vibes into a natural-sounding sentence
-            const vibeDescription = vibes.join(", and ");
+            const vibeDescription = vibes.join("And ");
 
             // Full weather report text
             const elements = [
-                `Alright kidda, here’s the lowdown for the weather today ${weather.datetime}: conditions are lookin’ like ${weather.conditions}, so take from that what you will. ${vibeDescription}. You’re lookin’ at a max of ${weather.tempmax}°C and a low of ${weather.tempmin}°C, with the current temperature sittin’ around ${weather.temp}°C – though it’s feelin’ more like ${weather.feelslike}°C. Humidity’s at ${weather.humidity}%, and there’s been about ${weather.precip}mm of rain with a ${weather.precipprob}% chance of more on the way. Wind’s clockin’ in at around ${weather.windspeed}mph. The sun made its entrance at ${weather.sunrise}AM and it’ll leg it again at around ${weather.sunset}PM.`,
+                `Alright kidda, here’s the lowdown for the weather today ${weather.datetime}: conditions are lookin’ like ${weather.conditions}. ${vibeDescription}. You’re lookin’ at a max of ${weather.tempmax}°C and a low of ${weather.tempmin}°C, with the current temperature sittin’ around ${weather.temp}°C – though it’s feelin’ more like ${weather.feelslike}°C. Humidity’s at ${weather.humidity}%, and there’s been about ${weather.precip}mm of rain with a ${weather.precipprob}% chance of more on the way. Wind’s clockin’ in at around ${weather.windspeed}mph. The sun made its entrance at ${weather.sunrise}AM and it’ll leg it again at around ${weather.sunset}PM.`,
             ];
 
             // Display weather information
