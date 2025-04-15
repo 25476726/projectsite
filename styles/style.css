@@ -151,7 +151,7 @@ nav.show ~ main {
   }
   .banner-container h1 { 
     position: absolute;
-    top: 25%; 
+    top: 15%; 
     left: 50%; 
     transform: translate(-50%, -50%);
 }
