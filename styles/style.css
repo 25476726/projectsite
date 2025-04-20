@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Monoton&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anta&family=Monoton&family=Tektur:wght@400..900&display=swap');
 body {
     background-color: white;
     color: black;
@@ -8,6 +8,21 @@ body {
     min-height: 100vh;
     margin: 0;
     transition: 0.2s;
+}
+h1, h2, h3, h4 {
+    font-family: "Anta", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: xx-large;
+}
+p, li, a {
+    font-family: "Tektur", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    font-size: large;
+    font-variation-settings:
+      "wdth" 100;
 }
 #link {
     font-weight: bold;
