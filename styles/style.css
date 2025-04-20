@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Monoton&display=swap');
 body {
-    background-color: #efe;
+    background-color: white;
     color: black;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     display: flex;
@@ -95,6 +95,10 @@ body {
     height: 100%;
     z-index: 1;
   }
+.no-scroll {
+    overflow: hidden;
+  }
+  
 button { 
     all: unset; /* remove default shadows buttons have */
 }
@@ -176,7 +180,7 @@ footer {
 }
 .answer-btn {
     display: block;
-    width: 100%;
+    max-width: 100%;
     padding: 10px;
     margin: 10px 0; 
     font-size: 16px;
@@ -209,6 +213,13 @@ nav.show ~ main {
     left: 50%; 
     transform: translate(-50%, -50%);
 }
+.warning {
+    color: rgb(100, 0, 0);
+}
+main {
+    display: flex;
+    flex-direction: column-reverse;
+}
 /* DARK MODE STYLES */
 body.dark-mode {
     color: white;
@@ -232,6 +243,9 @@ body.dark-mode #nav li::before {
 }
 body.dark-mode #nav li:hover::before {
     filter: brightness(75%) sepia(25%);
+}
+body.dark-mode .warning {
+    color: lightcoral;
 }
 
 @media (min-aspect-ratio: 1/1) { /*Desktop only*/
