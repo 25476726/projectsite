@@ -214,7 +214,9 @@ button {
 }
 footer {
     margin-top: auto;
+    margin-bottom: 2em;
     text-align: right;
+    border-bottom: 3px solid darkolivegreen;
 }
 footer p, footer a {
     font-family: "Permanent Marker", cursive;
