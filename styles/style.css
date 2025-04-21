@@ -21,8 +21,9 @@ h1 {
 }
 h2 {
     font-size: 3em;
-    text-align: center;
+    text-align: left;
     margin-top: 0em;
+    border-bottom: 1px solid darkkhaki;
 }
 h3 {
     font-size: 2em;
@@ -34,6 +35,7 @@ h4 {
     font-size: 1.5em;
     text-align: right;
     margin-top: 0em;
+    border-bottom: 1px solid darkkhaki;
 }
 p, li, a {
     font-family: "Tektur", sans-serif;
@@ -154,8 +156,8 @@ button {
     background: darkolivegreen;
 }
 #navshow {
-    display: block;
-    margin: 5px auto;
+    align-self: flex-end;
+    margin: 5px;
     text-align: center;
     width: auto; 
     max-width: 10%; 
