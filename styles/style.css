@@ -258,7 +258,7 @@ nav.show ~ main {
 .warning {
     color: rgb(100, 0, 0);
 }
-main, #transport-main section {
+main, #transport-main section, #bars {
     display: flex;
     flex-direction: column-reverse;
 }
