@@ -48,7 +48,7 @@ p, li, a {
     font-variation-settings:
       "wdth" 100;
 }
-#link {
+.link {
     font-weight: bold;
     color: midnightblue;
 }
@@ -199,8 +199,8 @@ button {
     max-width: 100%;
 }
 #transport-main img {
-    max-width: 60vw;
-    max-height: 80vh;
+    max-width: 50vw;
+    max-height: 70vh;
 }
 .about-img {
     max-width: 70%;
@@ -270,7 +270,7 @@ body.dark-mode {
     color: white;
     background-color: #0a0f0a;
 }
-body.dark-mode #link {
+body.dark-mode .link {
     font-weight: bold;
     color: lightblue;
 }
