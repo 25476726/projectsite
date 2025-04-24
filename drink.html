@@ -10,6 +10,7 @@
     <script src="js/scroll.js"></script>
     <script src="js/theme.js"></script>
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
 </head>
 <body>
 
@@ -70,6 +71,9 @@
       <script src="js/gaffdecider.js"></script>
 
     <h2>Making your own mind up instead? Here is a selection of some of our favourite places to grab some drinks in Liverpool City Centre!</h2>
+    <div id="map"></div>
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script src="js/bar-map.js"></script>
     <article id="bars">
         <h3>Head of Steam</h3>
         <p>Sound spot, this one. Grab a pint or a craft beer and soak up the laid-back vibes. A perfect mix of history and modern, just a short walk from the waterfront.</p>
@@ -189,8 +193,6 @@
         <p>McCooley’s is always a good shout – loads of drinks on offer, a fun atmosphere, and always packed with good vibes. A top place for a night out with your mates.</p>
         <img class="bar" src="https://media-cdn.tripadvisor.com/media/photo-s/0e/25/13/9d/great-sports-bar.jpg" alt="Image of McCooley's (Mathew St)">
 
-</article>
-<section>
     <h2>Skint? Here are all Wetherspoons pubs in and around Liverpool!</h2>
 
             <h3>The Lime Kiln (Lloyds Bar) L1 Concert Square</h3>
@@ -256,10 +258,7 @@
             <h3>The Bakers Brewery, Huyton</h3>
             <p>The Bakers Brewery’s sound in Huyton – perfect if you're out in the area. Classic Wetherspoons – great for a cheap pint and a relaxed atmosphere. Can’t go wrong.</p>
             <img class="bar" src="https://s0.geograph.org.uk/geophotos/06/71/39/6713961_8b8c9622.jpg" alt="Image of The Bakers Brewery">
-    </section>
-    <div id="map"></div>  
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDpU5QDLR183ukjikzb7HgLele1ajcOItM&libraries=places&callback=initMap" async defer></script>
-    <script src="js/map.js"></script>
+</article>
     <footer>
         <p>© Copyright Lewis Brougham 2025.  Made with proper love and a bit of Scouse magic. See more of my work <a class="link" href="https://lewis-brougham.netlify.app/#mywork" target="_blank" rel="noopener noreferrer">here.</a></p>
     </footer>
