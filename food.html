@@ -10,6 +10,7 @@
     <script src="js/scroll.js"></script>
     <script src="js/theme.js"></script>
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
 </head>
 <body>
 
@@ -32,6 +33,9 @@
     <main id="food-main">
         <button id="navshow" aria-label="Show navigation menu"><i class="material-icons">apps</i></button>
         <h1>Restaurants & Places to Eat</h1>
+        <div id="map"></div>
+        <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+        <script src="js/food-map.js"></script>
 
             <h2>City Centre Restaurants</h2>
 
@@ -131,11 +135,6 @@
                 <li><strong>Leaf on Allerton</strong> – Lovely brunch spot with loads of teas and healthy options – same vibe as the Bold St one.</li>
                 <li><strong>Casa Italia (Woolton)</strong> – Family-run Italian that’s proper old school – warm service and big portions.</li>
                 </ul>
-            
-    
-    <div id="map"></div>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDpU5QDLR183ukjikzb7HgLele1ajcOItM&libraries=places&callback=initMap" async defer></script>
-    <script src="js/map.js"></script>
     <footer>
         <p>© Copyright Lewis Brougham 2025.  Made with proper love and a bit of Scouse magic. See more of my work <a class="link" href="https://lewis-brougham.netlify.app/#mywork" target="_blank" rel="noopener noreferrer">here.</a></p>
     </footer>
