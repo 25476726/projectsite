@@ -1,15 +1,30 @@
-// Create map centered on Liverpool City Centre (Coordinates for Liverpool)
-var map = L.map('map').setView([53.4084, -2.9916], 13); // Liverpool city centre coordinates
+var map = L.map('map').setView([53.4084, -2.9916], 10); //liverpool city centre coordinates
 
-// Add OpenStreetMap tile layer
 L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+    attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a>',
+    className: 'scouse-map-tiles'
 }).addTo(map);
 
-// Function to load restaurants using Overpass API
+var restaurantIcon = L.divIcon({
+    className: 'material-icons',
+    iconSize: [30, 30],
+    iconAnchor: [15, 30],
+    popupAnchor: [0, -28],
+    html: '<span class="material-icons" style="color: black;">restaurant</span>', 
+    className: 'restaurant-icon'
+});
+
+var userIcon = L.divIcon({
+    className: 'material-icons',
+    iconSize: [32, 32],
+    iconAnchor: [16, 32],
+    popupAnchor: [0, -32],
+    html: '<span class="material-icons" style="color: black;">my_location</span>', 
+    className: 'user-icon'
+});
+
 function loadRestaurants() {
-    // Overpass API query for restaurants in Liverpool City Centre
-    var query = `
+    const query = `
         [out:json];
         area["name"="Liverpool"]->.searchArea;
         (
@@ -17,26 +32,52 @@ function loadRestaurants() {
           way["amenity"="restaurant"](area.searchArea);
           relation["amenity"="restaurant"](area.searchArea);
         );
-        out body;
+        out center;
     `;
-    
-    var url = 'https://overpass-api.de/api/interpreter?data=' + encodeURIComponent(query);
+
+    const url = 'https://overpass-api.de/api/interpreter?data=' + encodeURIComponent(query);
 
     fetch(url)
         .then(response => response.json())
         .then(data => {
-            data.elements.forEach(function(element) {
-                // Extract coordinates for each restaurant
-                var lat = element.lat || element.center.lat;
-                var lon = element.lon || element.center.lon;
+            data.elements.forEach(function (element) {
+                const lat = element.lat || element.center?.lat;
+                const lon = element.lon || element.center?.lon;
 
-                // Add marker for each restaurant
-                L.marker([lat, lon]).addTo(map)
-                    .bindPopup(`<b>${element.tags.name || "Unnamed Restaurant"}</b><br>Type: ${element.tags['amenity'] || 'Restaurant'}`);
+                if (lat && lon) {
+                    L.marker([lat, lon], { icon: restaurantIcon }).addTo(map)
+                        .bindPopup(`
+                            <div style="font-family: sans-serif;">
+                                <strong>${element.tags.name || "Unnamed Restaurant"}</strong><br>
+                                Cuisine: ${element.tags.cuisine || "Various"}<br>
+                            </div>
+                        `);
+                }
             });
         })
         .catch(err => console.error("Error fetching restaurant data:", err));
 }
 
-// Load restaurants after map is initialized
+function showUserLocation() {
+    if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(
+            function (position) {
+                const userLat = position.coords.latitude;
+                const userLon = position.coords.longitude;
+
+                L.marker([userLat, userLon], { icon: userIcon }).addTo(map)
+                    .bindPopup("<b>You are here, kidda!</b>").openPopup();
+
+                map.setView([userLat, userLon], 14);
+            },
+            function (error) {
+                console.warn("Geolocation error:", error.message);
+            }
+        );
+    } else {
+        console.warn("Geolocation not supported by this browser.");
+    }
+}
+
 loadRestaurants();
+showUserLocation();

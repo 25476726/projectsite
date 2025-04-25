@@ -1,42 +1,83 @@
-        // Create map centered on Liverpool City Centre (Coordinates for Liverpool)
-        var map = L.map('map').setView([53.4084, -2.9916], 13); // Liverpool city centre coordinates
+var map = L.map('map').setView([53.4084, -2.9916], 10); // Liverpool city centre coordinates
+0
+L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a>',
+    className: 'scouse-map-tiles'
+}).addTo(map);
 
-        // Add OpenStreetMap tile layer
-        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-        }).addTo(map);
+var hotelIcon = L.divIcon({
+    className: 'material-icons',
+    iconSize: [30, 30],
+    iconAnchor: [15, 30],
+    popupAnchor: [0, -28],
+    html: '<span class="material-icons" style="color: black;">hotel</span>', 
+    className: 'hotel-icon'
+});
 
-        // Function to load hotels using Overpass API
-        function loadHotels() {
-            // Overpass API query for hotels in Liverpool City Centre
-            var query = `
-                [out:json];
-                area["name"="Liverpool"]->.searchArea;
-                (
-                  node["tourism"="hotel"](area.searchArea);
-                  way["tourism"="hotel"](area.searchArea);
-                  relation["tourism"="hotel"](area.searchArea);
-                );
-                out body;
-            `;
-            
-            var url = 'https://overpass-api.de/api/interpreter?data=' + encodeURIComponent(query);
+var userIcon = L.divIcon({
+    className: 'material-icons',
+    iconSize: [32, 32],
+    iconAnchor: [16, 32],
+    popupAnchor: [0, -32],
+    html: '<span class="material-icons" style="color: black;">my_location</span>', 
+    className: 'user-icon'
+});
 
-            fetch(url)
-                .then(response => response.json())
-                .then(data => {
-                    data.elements.forEach(function(element) {
-                        // Extract coordinates for each hotel
-                        var lat = element.lat || element.center.lat;
-                        var lon = element.lon || element.center.lon;
+function loadHotels() {
+    const query = `
+        [out:json];
+        area["name"="Liverpool"]->.searchArea;
+        (
+          node["tourism"="hotel"](area.searchArea);
+          way["tourism"="hotel"](area.searchArea);
+          relation["tourism"="hotel"](area.searchArea);
+        );
+        out center;
+    `;
 
-                        // Add marker for each hotel
-                        L.marker([lat, lon]).addTo(map)
-                            .bindPopup(`<b>${element.tags.name || "Unnamed Hotel"}</b><br>Hotel Type: ${element.tags['tourism'] || 'Unknown'}`);
-                    });
-                })
-                .catch(err => console.error("Error fetching hotel data:", err));
-        }
+    const url = 'https://overpass-api.de/api/interpreter?data=' + encodeURIComponent(query);
 
-        // Load hotels after map is initialized
-        loadHotels();
+    fetch(url)
+        .then(response => response.json())
+        .then(data => {
+            data.elements.forEach(function (element) {
+                const lat = element.lat || element.center?.lat;
+                const lon = element.lon || element.center?.lon;
+
+                if (lat && lon) {
+                    L.marker([lat, lon], { icon: hotelIcon }).addTo(map)
+                        .bindPopup(`
+                            <div style="font-family: sans-serif;">
+                                <strong>${element.tags.name || "Unnamed Hotel"}</strong><br>
+                                Type: ${element.tags['tourism'] || "Unknown"}<br>
+                            </div>
+                        `);
+                }
+            });
+        })
+        .catch(err => console.error("Error fetching hotel data:", err));
+}
+
+function showUserLocation() {
+    if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(
+            function (position) {
+                const userLat = position.coords.latitude;
+                const userLon = position.coords.longitude;
+
+                L.marker([userLat, userLon], { icon: userIcon }).addTo(map)
+                    .bindPopup("<b>You are here, kidda!</b>").openPopup();
+
+                map.setView([userLat, userLon], 14);
+            },
+            function (error) {
+                console.warn("Geolocation error:", error.message);
+            }
+        );
+    } else {
+        console.warn("Geolocation not supported by this browser.");
+    }
+}
+
+loadHotels();
+showUserLocation();

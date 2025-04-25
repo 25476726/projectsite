@@ -215,6 +215,22 @@ button {
     height: 500px;
     width: 100%;
 }
+.leaflet-popup-content {
+    font-family: 'Segoe UI', sans-serif;
+    font-size: 0.95rem;
+    line-height: 1.4;
+}
+.scouse-map-tiles {
+    filter: brightness(1.05) saturate(1.1);
+}
+.restaurant-icon,
+.user-icon {
+    transition: transform 0.2s ease;
+}
+.restaurant-icon:hover,
+.user-icon:hover {
+    transform: scale(1.1);
+}
 footer {
     margin-top: auto;
     margin-bottom: 2em;
