@@ -223,12 +223,10 @@ button {
 .scouse-map-tiles {
     filter: brightness(1.05) saturate(1.1);
 }
-.restaurant-icon,
-.user-icon {
+.restaurant-icon, .pub-icon, .hotel-icon, .user-icon {
     transition: transform 0.2s ease;
 }
-.restaurant-icon:hover,
-.user-icon:hover {
+.restaurant-icon:hover, .pub-icon:hover, .hotel-icon:hover, .user-icon:hover {
     transform: scale(1.1);
 }
 footer {
