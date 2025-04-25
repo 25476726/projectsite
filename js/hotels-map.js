@@ -1,10 +1,8 @@
 var map = L.map('map').setView([53.4084, -2.9916], 10); // Liverpool city centre coordinates
-0
 L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
     attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a>',
     className: 'scouse-map-tiles'
 }).addTo(map);
-
 var hotelIcon = L.divIcon({
     className: 'material-icons',
     iconSize: [30, 30],
@@ -13,7 +11,6 @@ var hotelIcon = L.divIcon({
     html: '<span class="material-icons" style="color: black;">hotel</span>', 
     className: 'hotel-icon'
 });
-
 var userIcon = L.divIcon({
     className: 'material-icons',
     iconSize: [32, 32],
@@ -22,7 +19,6 @@ var userIcon = L.divIcon({
     html: '<span class="material-icons" style="color: black;">my_location</span>', 
     className: 'user-icon'
 });
-
 function loadHotels() {
     const query = `
         [out:json];
@@ -34,7 +30,6 @@ function loadHotels() {
         );
         out center;
     `;
-
     const url = 'https://overpass-api.de/api/interpreter?data=' + encodeURIComponent(query);
 
     fetch(url)
@@ -57,7 +52,6 @@ function loadHotels() {
         })
         .catch(err => console.error("Error fetching hotel data:", err));
 }
-
 function showUserLocation() {
     if (navigator.geolocation) {
         navigator.geolocation.getCurrentPosition(
@@ -78,6 +72,5 @@ function showUserLocation() {
         console.warn("Geolocation not supported by this browser.");
     }
 }
-
 loadHotels();
 showUserLocation();
