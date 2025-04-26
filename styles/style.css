@@ -63,7 +63,7 @@ p, li, a {
     justify-content: center;
     border-radius: 2px;
     margin: 0.5rem;
-    transition: transform 0.3s ease;
+    transition: transform 0.2s ease;
     color: white; 
 }
 #nav li::before {
@@ -76,51 +76,32 @@ p, li, a {
     filter: brightness(80%) sepia(60%); 
     background: inherit;
     z-index: 0;
-    transition: filter 0.3s ease;
+    transition: filter 0.2s ease;
 }
 #nav li:hover::before {
     filter: brightness(100%) sepia(0%);
 }
-
 #home-tile, #home-tile-active {
-    background-image: url('banner-liver-crop.jpg');
-}
-
+    background-image: url('banner-liver-crop.jpg');}
 #about-tile, #about-tile-active {
-    background-image: url('nav-images/night1.jpg');
-}
-
+    background-image: url('nav-images/night1.jpg');}
 #sights-tile, #sights-tile-active {
-    background-image: url('nav-images/anglican1.jpg');
-}
-
+    background-image: url('nav-images/anglican1.jpg');}
 #food-tile, #food-tile-active {
-    background-image: url('nav-images/food.JPG');
-}
-
+    background-image: url('nav-images/food.JPG');}
 #drink-tile, #drink-tile-active {
-    background-image: url('nav-images/pint.JPG');
-}
-
+    background-image: url('nav-images/pint.JPG');}
 #shop-tile, #shop-tile-active {
-    background-image: url('nav-images/l1.avif'); /*Image from: https://unsplash.com/photos/people-walking-on-the-street-during-daytime-MkvehbVPPDw*/
-}
-
+    background-image: url('nav-images/l1.avif'); /*Image from: https://unsplash.com/photos/people-walking-on-the-street-during-daytime-MkvehbVPPDw*/}
 #transport-tile, #transport-tile-active {
-    background-image: url('nav-images/transport.jpg');
-}
-
+    background-image: url('nav-images/transport.jpg');}
 #hotel-tile, #hotel-tile-active {
-    background-image: url('nav-images/bed.jpg');
-}
-
+    background-image: url('nav-images/bed.jpg');}
 #housing-tile, #housing-tile-active {
-    background-image: url('nav-images/housing.jpg');
-}
-
+    background-image: url('nav-images/housing.jpg');}
 #quiz-tile, #quiz-tile-active {
-    background-image: url('nav-images/quiz.jpg'); /*Image is AI generated*/
-}
+    background-image: url('nav-images/quiz.jpg'); /*Image is AI generated*/}
+    
   #nav li a {
     color: white;
     text-decoration: none;
@@ -132,7 +113,18 @@ p, li, a {
     width: 100%;
     height: 100%;
     z-index: 1;
+    transition: 0.2s;
   }
+  #home-tile:hover i, #about-tile:hover i, #sights-tile:hover i, #food-tile:hover i, #drink-tile:hover i,
+  #shop-tile:hover i, #transport-tile:hover i, #hotel-tile:hover i, #housing-tile:hover i, #quiz-tile:hover i {
+    color: lightskyblue;
+    text-shadow: 4px 4px 6px rgba(0, 0, 32, 1); 
+  }
+  #home-tile-active i, #about-tile-active i, #sights-tile-active i, #food-tile-active i, #drink-tile-active i,
+  #shop-tile-active i, #transport-tile-active i, #hotel-tile-active i, #housing-tile-active i, #quiz-tile-active i {
+    color: lightgreen;
+    text-shadow: 4px 4px 6px rgba(0, 32, 0, 1); 
+}
 .no-scroll {
     overflow: hidden;
   }
@@ -147,7 +139,6 @@ button {
     margin-top: -15px;
 }
 .navactive a {
-    /* border-right: 16px solid #6cbc6c; */
     border-bottom: 1px solid black;
 }
 #nav {
