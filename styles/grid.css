@@ -72,17 +72,17 @@
       grid-column-end: 6;
       grid-row: 4;
     }
-    #about-main figure {
+    #about-main figure, #transport-main figure {
       display: grid;
-      grid-template-columns: 1fr 1fr;  
+      grid-template-columns: 55% 45%;  
       grid-template-rows: 1fr;  
     }
-    #about-main figure p {
+    #about-main figure p, #transport-main figure article {
       grid-column: 1; 
       grid-row: 1;
     }
   
-  #about-main figure img {
+  #about-main figure img, #transport-main figure img {
       grid-column: 2; 
       grid-row: 1;
     }

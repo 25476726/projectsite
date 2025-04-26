@@ -140,6 +140,9 @@ button {
     font-size: 3em;
     margin-top: -15px;
 }
+#about-main .first-p {
+    text-align: left;
+}
 .navactive a {
     border-bottom: 1px solid black;
 }
@@ -198,8 +201,15 @@ button {
     max-width: 100%;
     object-fit: contain;
 }
-#about-main figure {
+#transport-main img {
+    align-self: flex-end;
+}
+#about-main figure, #transport-main figure {
     gap: 1em;  
+}
+#about-main figure p {
+    text-align: right;
+    margin-top: 2em;
 }
 .tallimg {
     max-width: 50%;
@@ -329,6 +339,10 @@ body.dark-mode .warning {
         body {
             margin-inline: 0.5em;
         }
+        #about-main figure, #transport-main figure {
+            display: flex; 
+            flex-direction: column-reverse; 
+        }        
         #nav ul {
             list-style: none;
             padding-bottom: 10%; /*keeps a space at bottom to ensure all nav items are easy to reach on mobilebv */
