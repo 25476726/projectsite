@@ -101,7 +101,7 @@ p, li, a {
     background-image: url('nav-images/housing.jpg');}
 #quiz-tile, #quiz-tile-active {
     background-image: url('nav-images/quiz.jpg'); /*Image is AI generated*/}
-    
+
   #nav li a {
     color: white;
     text-decoration: none;
@@ -113,8 +113,11 @@ p, li, a {
     width: 100%;
     height: 100%;
     z-index: 1;
-    transition: 0.2s;
+
   }
+  #nav li i {
+    transition: all 0.2s ease;
+}
   #home-tile:hover i, #about-tile:hover i, #sights-tile:hover i, #food-tile:hover i, #drink-tile:hover i,
   #shop-tile:hover i, #transport-tile:hover i, #hotel-tile:hover i, #housing-tile:hover i, #quiz-tile:hover i {
     color: lightskyblue;
@@ -125,10 +128,9 @@ p, li, a {
     color: lightgreen;
     text-shadow: 4px 4px 6px rgba(0, 32, 0, 1); 
 }
-.no-scroll {
+.no-scroll { /*activates when nav shows*/
     overflow: hidden;
   }
-  
 button { 
     all: unset; /* remove default shadows buttons have */
 }
