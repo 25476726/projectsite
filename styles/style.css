@@ -336,7 +336,7 @@ body.dark-mode .warning {
             height: 80vh;
             overflow: hidden;
           }      
-          #nav li a {
+          #nav li a { /*reduced size to prevent overflow of the nav on smaller screens*/
             font-size: 0.9rem;
           }
         .bar {
