@@ -342,7 +342,12 @@ body.dark-mode .warning {
         #about-main figure, #transport-main figure {
             display: flex; 
             flex-direction: column-reverse; 
-        }        
+            align-items: center; 
+            margin: 0;
+        }      
+        #about-main figure img, #transport-main figure img {
+            margin-bottom: -2em;
+        }      
         #nav ul {
             list-style: none;
             padding-bottom: 10%; /*keeps a space at bottom to ensure all nav items are easy to reach on mobilebv */
