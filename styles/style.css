@@ -33,7 +33,7 @@ h3 {
     margin-top: 0em;
     border-bottom: 2px solid darkkhaki;
 }
-h4 {
+h4, .listhead {
     font-size: 1.5em;
     text-align: right;
     margin-top: 0em;
@@ -245,7 +245,7 @@ footer p, footer a {
     font-weight: 400;
     font-style: normal;
 }
-.answer-btn {
+.answer-btn, #next-btn {
     display: block;
     max-width: 100%;
     padding: 10px;
@@ -256,6 +256,7 @@ footer p, footer a {
     cursor: pointer;
     transition: 0.2s;
   }
+
   nav {
     transform: translateX(120%); 
     transition: transform 0.2s ease-in-out;
@@ -277,10 +278,19 @@ nav.show ~ main {
     left: 50%; 
     transform: translate(-50%, -50%);
 }
+#quiz-main ul {
+    list-style-type: none;
+    display: flex; 
+    flex-direction: column-reverse; 
+}
+.listhead {
+    margin-bottom: 1.5em;
+    margin-top: 0.5em
+}
 .warning {
     color: rgb(100, 0, 0);
 }
-main, #transport-main section, #bars {
+main, #transport-main section, #bars, #quiz-main section, #quiz-container  {
     display: flex;
     flex-direction: column-reverse;
 }
@@ -350,7 +360,7 @@ body.dark-mode .warning {
         }      
         #nav ul {
             list-style: none;
-            padding-bottom: 10%; /*keeps a space at bottom to ensure all nav items are easy to reach on mobilebv */
+            padding-bottom: 10%; /*keeps a space at bottom to ensure all nav items are easy to reach on mobileb*/
             padding: 0;
             margin: 0;
             width: 100vw;
