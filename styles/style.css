@@ -349,6 +349,21 @@ body.dark-mode .warning {
         body {
             margin-inline: 0.5em;
         }
+        h1 {
+            font-size: 2.5em;
+        }
+        h2 {
+            font-size: 2em;
+        }
+        h3 {
+            font-size: 1.5em;
+        }
+        h4, .listhead {
+            font-size: 1.25em;
+        }
+        p, li, a {
+            font-size: medium;
+        }
         #about-main figure, #transport-main figure {
             display: flex; 
             flex-direction: column-reverse; 
