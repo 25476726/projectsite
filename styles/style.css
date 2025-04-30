@@ -299,7 +299,7 @@ main, #transport-main section, #bars, #quiz-main section, #quiz-container  {
     bottom: 20px; 
     left: 50%;
     transform: translateX(-50%);
-    background: #224;
+    background: rgba(34, 34, 68, 0.75);
     color: #fff;
     padding: 12px 20px;
     border-radius: 2px;
