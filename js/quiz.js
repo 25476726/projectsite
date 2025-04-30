@@ -50,6 +50,16 @@ const questions = [
     explanation: "'Gegging in' is butting in or getting involved in something that’s none of your business. Like someone earwigging your convo at the bus stop."
   },
   {
+    question: "How do Scousers say 'ice lolly'?",
+    answers: [
+      { text: "Lolly ice", correct: true },
+      { text: "Ice lol", correct: false },
+      { text: "Frozen stick", correct: false },
+      { text: "Chilly pop", correct: false }
+    ],
+    explanation: "In Liverpool, people flip it and say 'lolly ice' instead of 'ice lolly'. It’s a proper Scouse-ism that confuses everyone else in the UK!"
+  },
+  {
     question: "What does it mean if you're 'skint'?",
     answers: [
       { text: " You have loads of money ", correct: false },
