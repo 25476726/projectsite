@@ -19,14 +19,14 @@ window.addEventListener('load', () => { //AUTO START AT BOTTOM OF PAGE
     }
   });
   
-  // --- Mobile: Touch swipe down at the visual bottom ---
+  // --- Mobile: Detect swipe down when at the visual bottom ---
   window.addEventListener("touchstart", (e) => {
     touchStartY = e.touches[0].clientY; // Get the initial touch position
   });
   
-  window.addEventListener("touchend", (e) => {
-    touchEndY = e.changedTouches[0].clientY; // Get the final touch position after release
-    const direction = touchStartY - touchEndY; // Check swipe direction (negative = swipe down)
+  window.addEventListener("touchmove", (e) => {
+    touchEndY = e.touches[0].clientY; // Get the current touch position while moving
+    const direction = touchStartY - touchEndY; // Negative direction means swipe down
     const scrollTop = window.scrollY;
     const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
   
@@ -48,4 +48,5 @@ window.addEventListener('load', () => { //AUTO START AT BOTTOM OF PAGE
       }, 3000); // Show the message for 3 seconds
     }
   }
+  
   
