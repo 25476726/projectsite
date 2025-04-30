@@ -24,12 +24,12 @@ window.addEventListener('load', () => { //AUTO START AT BOTTOM OF PAGE
   
   window.addEventListener("touchmove", (e) => {
     const touchCurrentY = e.touches[0].clientY;
-    const direction = touchStartY + touchCurrentY;
+    const direction = touchStartY - touchCurrentY;
     const scrollTop = window.scrollY;
     const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
   
     // If user swipes down (direction < 0) while already at the bottom
-    if (scrollTop >= maxScroll - 5 && direction < -10 && !warningVisible) {
+    if (scrollTop >= maxScroll && direction < 0 && !warningVisible) {
       showScrollWarning();
     }
   });
