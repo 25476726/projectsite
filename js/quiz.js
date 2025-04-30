@@ -52,9 +52,9 @@ const questions = [
   {
     question: "What does it mean if you're 'skint'?",
     answers: [
-      { text: " You're rich ", correct: false },
+      { text: " You have loads of money ", correct: false },
       { text: " You're tired ", correct: false },
-      { text: " You're broke ", correct: true },
+      { text: " You have no money ", correct: true },
       { text: " You're drunk ", correct: false }
     ],
     explanation: "'Skint' means you're out of cash, stone cold broke. No chance of a night out unless your mate's buying!"

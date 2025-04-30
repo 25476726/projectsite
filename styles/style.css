@@ -294,6 +294,25 @@ main, #transport-main section, #bars, #quiz-main section, #quiz-container  {
     display: flex;
     flex-direction: column-reverse;
 }
+.scroll-warning {
+    position: fixed;
+    bottom: 20px; 
+    left: 50%;
+    transform: translateX(-50%);
+    background: #224;
+    color: #fff;
+    padding: 12px 20px;
+    border-radius: 2px;
+    font-weight: bold;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.2s ease;
+    z-index: 20;
+  }
+  .scroll-warning.show {
+    opacity: 1;
+  }
 /* DARK MODE STYLES */
 body.dark-mode {
     color: white;
