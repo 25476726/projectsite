@@ -6,37 +6,35 @@ window.addEventListener('load', () => { //AUTO START AT BOTTOM OF PAGE
   //SCROLL WARNING CODE
   let warningVisible = false;
   let touchStartY = 0;
-  let touchEndY = 0;
   
-  // --- Desktop: Show warning when scrolling DOWN at the visual bottom ---
+  // Desktop: Show warning at bottom when scrolling DOWN
   window.addEventListener("wheel", (e) => {
     const scrollTop = window.scrollY;
     const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
   
-    // If user is at the visual bottom (max scroll) and tries to scroll DOWN
     if (scrollTop >= maxScroll - 5 && e.deltaY > 0 && !warningVisible) {
       showScrollWarning();
     }
   });
   
-  // --- Mobile: Detect swipe down when at the visual bottom ---
+  // Mobile: Touch swipe down at bottom of page
   window.addEventListener("touchstart", (e) => {
-    touchStartY = e.touches[0].clientY; // Get the initial touch position
+    touchStartY = e.touches[0].clientY;
   });
   
   window.addEventListener("touchmove", (e) => {
-    touchEndY = e.touches[0].clientY; // Get the current touch position while moving
-    const direction = touchStartY + touchEndY; // Negative direction means swipe down
+    const touchCurrentY = e.touches[0].clientY;
+    const direction = touchStartY + touchCurrentY;
     const scrollTop = window.scrollY;
     const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
   
-    // Only show the warning if we're at the bottom and the swipe is downward
+    // If user swipes down (direction < 0) while already at the bottom
     if (scrollTop >= maxScroll - 5 && direction < -10 && !warningVisible) {
       showScrollWarning();
     }
   });
   
-  // Reusable function to show the scroll-up warning
+  // Reusable function
   function showScrollWarning() {
     const warning = document.querySelector(".scroll-warning");
     if (warning) {
@@ -45,7 +43,7 @@ window.addEventListener('load', () => { //AUTO START AT BOTTOM OF PAGE
       setTimeout(() => {
         warning.classList.remove("show");
         warningVisible = false;
-      }, 3000); // Show the message for 3 seconds
+      }, 3000);
     }
   }
   
