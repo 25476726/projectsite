@@ -26,7 +26,7 @@ window.addEventListener('load', () => { //AUTO START AT BOTTOM OF PAGE
   
   window.addEventListener("touchmove", (e) => {
     touchEndY = e.touches[0].clientY; // Get the current touch position while moving
-    const direction = touchStartY - touchEndY; // Negative direction means swipe down
+    const direction = touchStartY + touchEndY; // Negative direction means swipe down
     const scrollTop = window.scrollY;
     const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
   
