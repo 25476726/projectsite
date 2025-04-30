@@ -29,7 +29,7 @@ window.addEventListener('load', () => { //AUTO START AT BOTTOM OF PAGE
     const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
   
     // If user swipes down (direction < 0) while already at the bottom
-    if (scrollTop >= maxScroll && direction < 0 && !warningVisible) {
+    if (scrollTop >= maxScroll && direction > 0 && !warningVisible) {
       showScrollWarning();
     }
   });
