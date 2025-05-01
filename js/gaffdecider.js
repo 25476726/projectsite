@@ -1,4 +1,4 @@
-const tierMessages = {
+const tierMessages = {//tells user how good or bad their outings will be based off the tier they select
     A: "Only the best, for the best!",
     B: "Decent little day/night out for you there!",
     C: "Not too shabby like!",
@@ -11,7 +11,7 @@ const tierMessages = {
   };
   
   const tierPubs = {
-    A: [
+    A: [//our favourites
         "Head of Steam",
         "The Bridewell",
         "Liverpool Gin Distillery",
@@ -175,7 +175,7 @@ const tierMessages = {
         "Ava's Bar"
       ],
       
-      U: [
+      U: [//our least favourites
         "The Empire",
         "The Central",
         "Ranelagh's Tavern",
@@ -194,21 +194,21 @@ const tierMessages = {
     const countInput = parseInt(document.getElementById("countInput").value);
     const resultDiv = document.getElementById("result");
 
-    if (!tierInput || isNaN(countInput) || countInput < 1) {
+    if (!tierInput || isNaN(countInput) || countInput < 1) {//validation
         resultDiv.textContent = "Please enter valid input for both fields.";
         return;
     }
 
     let options = [];
 
-    if (tierInput === "ALL") {
+    if (tierInput === "ALL") {//puts enitre list together
         for (const tier in tierPubs) {
             options = options.concat(tierPubs[tier]);
         }
     } else if (tierInput === "W") {
         options = tierPubs.W;
     } else {
-        for (const char of tierInput) {
+        for (const char of tierInput) {//for mixed tiers like AC or FE etc
             if (tierPubs[char]) {
                 options = options.concat(tierPubs[char]);
             }
@@ -216,7 +216,7 @@ const tierMessages = {
     }
 
     if (options.length === 0) {
-        resultDiv.textContent = "No pubs found for that tier. Make sure to add them to the list!";
+        resultDiv.textContent = "Invalid tier entered";
         return;
     }
 

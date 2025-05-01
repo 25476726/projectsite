@@ -6,8 +6,7 @@ window.addEventListener('load', () => { //AUTO START AT BOTTOM OF PAGE
   //SCROLL WARNING CODE
   let warningVisible = false;
   let touchStartY = 0;
-  
-  // Desktop: Show warning at bottom when scrolling DOWN
+  //for scrolling on mouse
   window.addEventListener("wheel", (e) => {
     const scrollTop = window.scrollY;
     const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
@@ -16,8 +15,7 @@ window.addEventListener('load', () => { //AUTO START AT BOTTOM OF PAGE
       showScrollWarning();
     }
   });
-  
-  // Mobile: Touch swipe down at bottom of page
+//foir swiping on touch screens
   window.addEventListener("touchstart", (e) => {
     touchStartY = e.touches[0].clientY;
   });
@@ -28,13 +26,11 @@ window.addEventListener('load', () => { //AUTO START AT BOTTOM OF PAGE
     const scrollTop = window.scrollY;
     const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
   
-    // If user swipes down (direction < 0) while already at the bottom
     if (scrollTop >= maxScroll - 5 && direction > 0 && !warningVisible) {
       showScrollWarning();
     }
   });
   
-  // Reusable function
   function showScrollWarning() {
     const warning = document.querySelector(".scroll-warning");
     if (warning) {

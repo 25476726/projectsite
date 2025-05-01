@@ -3,7 +3,7 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
     attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a>',
     className: 'scouse-map-tiles'
 }).addTo(map);
-var hotelIcon = L.divIcon({
+var hotelIcon = L.divIcon({//displays google hotel icon for each hotel on map
     className: 'material-icons',
     iconSize: [30, 30],
     iconAnchor: [15, 30],
@@ -11,7 +11,7 @@ var hotelIcon = L.divIcon({
     html: '<span class="material-icons" style="color: black;">hotel</span>', 
     className: 'hotel-icon'
 });
-var userIcon = L.divIcon({
+var userIcon = L.divIcon({//pin for user location
     className: 'material-icons',
     iconSize: [32, 32],
     iconAnchor: [16, 32],

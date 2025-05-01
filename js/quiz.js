@@ -145,12 +145,12 @@ const questions = [
   let currentQuestionIndex = 0;
   let score = 0;
   
-  const questionElement = document.getElementById("question");
+  const questionElement = document.getElementById("question");//selects html elements
   const answersElement = document.getElementById("answers");
   const nextButton = document.getElementById("next-btn");
   
   function startQuiz() {
-    shuffledQuestions = questions.sort(() => Math.random() - 0.5);
+    shuffledQuestions = questions.sort(() => Math.random() - 0.5);//shuffle questions into random order
     currentQuestionIndex = 0;
     score = 0;
     nextButton.innerText = "Next";
@@ -181,21 +181,19 @@ const questions = [
     const current = shuffledQuestions[currentQuestionIndex];
   
     if (isCorrect) {
-      button.style.backgroundColor = "#4caf50";
+      button.style.backgroundColor = "#0aae0a";//green for correct answer
       score++;
     } else {
-      button.style.backgroundColor = "#f44336";
+      button.style.backgroundColor = "#ae0a0a";//red for wrong answer
     }
-  
-    // Show correct answer
+
     Array.from(answersElement.children).forEach(btn => {
       btn.disabled = true;
       if (shuffledQuestions[currentQuestionIndex].answers.find(a => a.correct).text === btn.innerText) {
-        btn.style.backgroundColor = "#4caf50";
+        btn.style.backgroundColor = "#0aae0a";
       }
     });
-  
-    // Show explanation
+
     const explanation = document.createElement("p");
     explanation.innerText = `💡 ${current.explanation}`;
     explanation.style.marginTop = "20px";
@@ -203,7 +201,7 @@ const questions = [
     answersElement.appendChild(explanation);
   
     nextButton.style.display = "block";
-    nextButton.style.backgroundColor = "#45a049";
+    nextButton.style.backgroundColor = "#0aae0a";
   }
   
   nextButton.addEventListener("click", () => {
@@ -215,7 +213,7 @@ const questions = [
     }
   });
   
-  function showScore() {
+  function showScore() { //shows user score and percentage at end.
     const percentage = Math.round((score / shuffledQuestions.length) * 100);
     questionElement.innerText = `You scored ${score} out of ${shuffledQuestions.length}!  You are ${percentage}% Scouse!`;    
     answersElement.innerHTML = "";
