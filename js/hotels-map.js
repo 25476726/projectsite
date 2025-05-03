@@ -1,10 +1,10 @@
-var map = L.map('map').setView([53.4084, -2.9916], 10); // Liverpool city centre coordinates
+var map = L.map('map').setView([53.4084, -2.9916], 10); // Liverpool city centre coordinates and radius
 L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
     attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a>',
     className: 'scouse-map-tiles'
 }).addTo(map);
 var hotelIcon = L.divIcon({//displays google hotel icon for each hotel on map
-    className: 'material-icons',
+    className: 'material-icons',//google's own icons
     iconSize: [30, 30],
     iconAnchor: [15, 30],
     popupAnchor: [0, -28],
@@ -19,7 +19,7 @@ var userIcon = L.divIcon({//pin for user location
     html: '<span class="material-icons" style="color: black;">my_location</span>', 
     className: 'user-icon'
 });
-function loadHotels() {
+function loadHotels() {//finds all hotels within the given radius of liverpool city centre
     const query = `
         [out:json];
         area["name"="Liverpool"]->.searchArea;

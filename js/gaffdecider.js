@@ -187,7 +187,7 @@ const tierMessages = {//tells user how good or bad their outings will be based o
         "The Rocking Horse"
       ],
       
-    W: ['The Lime Kiln','The Welkin','The Captain Alexander','The North Western','The Richard John Blackler','The Fall Well']
+    W: ['The Lime Kiln','The Welkin','The Captain Alexander','The North Western','The Richard John Blackler','The Fall Well']//wetherspoons only
   };
   document.getElementById("generateBtn").addEventListener("click", () => {
     const tierInput = document.getElementById("tierInput").value.toUpperCase().trim();

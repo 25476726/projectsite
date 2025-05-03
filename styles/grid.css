@@ -1,4 +1,4 @@
-#theme-toggle {
+#theme-toggle { /*these 4 are in the same grid cell on both layouts, so they were kept outside to save on duplicate code*/
     grid-column: 1;
     grid-row: 1;
   }

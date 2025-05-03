@@ -11,9 +11,9 @@ body {
 }
 h1, h2, h3, h4 {
     font-family: "Anta", sans-serif;
-  font-weight: 700;
-  font-style: normal;
-  margin-bottom: 1em;
+    font-weight: 700;
+    font-style: normal;
+    margin-bottom: 1em;
 }
 h1 {
     font-size: 4em;
@@ -99,7 +99,7 @@ p, li, a {
 #housing-tile, #housing-tile-active {
     background-image: url('nav-images/housing.jpg');}
 #quiz-tile, #quiz-tile-active {
-    background-image: url('nav-images/quiz.jpg'); /*Image is AI generated*/}
+    background-image: url('nav-images/quiz.jpg'); /*Image is AI generated as was not able to find any suitable images*/}
 
   #nav li a {
     color: white;
